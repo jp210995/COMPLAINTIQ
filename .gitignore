@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+.aws/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials
+secrets.*
+*secret*
+*credential*
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Generated data and indexes (backed up separately in S3)
+data/raw/*
+data/processed/*
+index/*
+state/*
+reports/*
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
