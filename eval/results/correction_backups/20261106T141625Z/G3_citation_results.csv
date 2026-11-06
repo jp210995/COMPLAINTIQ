@@ -1,0 +1,18 @@
+question_id,citation_count,valid_citations,invalid_citations,citation_validity,has_citation,invalid_chunk_ids
+G3-01,9,9,0,1.0,True,[]
+G3-02,8,8,0,1.0,True,[]
+G3-03,13,13,0,1.0,True,[]
+G3-04,9,9,0,1.0,True,[]
+G3-05,7,7,0,1.0,True,[]
+G3-06,7,7,0,1.0,True,[]
+G3-07,9,9,0,1.0,True,[]
+G3-08,8,8,0,1.0,True,[]
+G3-09,15,15,0,1.0,True,[]
+G3-10,10,10,0,1.0,True,[]
+G3-11,7,7,0,1.0,True,[]
+G3-12,11,11,0,1.0,True,[]
+G3-13,13,13,0,1.0,True,[]
+G3-14,12,12,0,1.0,True,[]
+G3-15,13,13,0,1.0,True,[]
+G3-16,9,9,0,1.0,True,[]
+G3-17,7,4,3,0.5714285714285714,True,"['sh_issue18_2019-03_page_0003_chunk_0001; C:sh_issue22_2020-09_page_0003_chunk_0001', 'sh_issue18_2019-03_page_0021_chunk_0001; C:sh_issue23_2021-01_page_0028_chunk_0001', 'exam_manual_v2_2012_page_0911_chunk_0001; C:exam_manual_v2_2012_page_0923_chunk_0001']"
