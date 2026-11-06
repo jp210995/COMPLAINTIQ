@@ -1,4 +1,4 @@
-import statistics
+
 import json
 import hashlib
 import sqlite3
@@ -45,9 +45,9 @@ brt = boto3.client(
 # Do not use guessed prices for the final cost report.
 
 PRICE_PER_1K = {
-    "sonnet-4-6": (None, None),
-    "opus-4-8": (None, None),
-    "haiku": (None, None)
+    "sonnet-4-6": (0.0033, 0.0165),
+    "opus-4-8": (0.0055, 0.0275),
+    "haiku": (None, None),
 }
 
 

@@ -1,0 +1,19 @@
+{
+  "phase": 5,
+  "timestamp_utc": "2026-11-06T09:50:02.839376+00:00",
+  "worker_model": "us.anthropic.claude-sonnet-4-6",
+  "judge_model": "us.anthropic.claude-opus-4-8",
+  "checks": {
+    "guard_redaction_and_injection": true,
+    "router_schema": true,
+    "triage_taxonomy": true,
+    "sql_safety": true,
+    "critic_fake_citation": true
+  },
+  "retrieval_indexes_available": true,
+  "notes": [
+    "Graph assembly and interrupt/resume are Phase 6.",
+    "Run retrieval tests only after loading the existing Phase 3 indexes.",
+    "Full end-to-end journey testing remains outstanding."
+  ]
+}
