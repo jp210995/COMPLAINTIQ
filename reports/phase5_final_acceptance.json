@@ -1,0 +1,35 @@
+{
+  "phase": 5,
+  "project": "ComplaintIQ",
+  "timestamp_utc": "2026-11-06T10:11:09.792929+00:00",
+  "region": "us-east-1",
+  "bucket": "sagemaker-complaintiq-456427397380",
+  "acceptance_checks": {
+    "shared_state": true,
+    "guard": true,
+    "router": true,
+    "triage": true,
+    "analyst": true,
+    "case_retrieval": true,
+    "regulatory_retrieval": true,
+    "drafter": true,
+    "critic": true,
+    "human_review": true,
+    "refusal": true,
+    "s3_publish": true,
+    "s3_audit": true,
+    "retrieval_indexes": true,
+    "draft_test": true,
+    "human_decision_tests": true,
+    "refusal_test": true,
+    "s3_report_test": true,
+    "s3_audit_test": true
+  },
+  "all_checks_passed": true,
+  "pending_for_phase_6": [
+    "Actual LangGraph interrupt and resume test",
+    "Checkpoint persistence and kernel restart test",
+    "End-to-end graph journeys",
+    "Graph routing and bounded revision loop"
+  ]
+}
