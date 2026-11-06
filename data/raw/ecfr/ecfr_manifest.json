@@ -1,0 +1,68 @@
+[
+  {
+    "title": 12,
+    "part": "1002",
+    "name": "Regulation B - Equal Credit Opportunity",
+    "publication_date": "2026-11-03",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1002",
+    "file": "/home/sagemaker-user/complaintiq/data/raw/ecfr/title_12_part_1002_2026-11-03.xml",
+    "bytes": 504474,
+    "sha256": "e05a7a592ffaf9b5519222a2aeba5f3ea34908db52edba8d8ce8adf7485e8891",
+    "downloaded_at_utc": "2026-11-05T18:08:29.012151+00:00"
+  },
+  {
+    "title": 12,
+    "part": "1005",
+    "name": "Regulation E - Electronic Fund Transfers",
+    "publication_date": "2026-11-03",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1005",
+    "file": "/home/sagemaker-user/complaintiq/data/raw/ecfr/title_12_part_1005_2026-11-03.xml",
+    "bytes": 859423,
+    "sha256": "0669a14f83f836f4086de21514f3bcd40041784e50c444b415f4d8e1909a10d0",
+    "downloaded_at_utc": "2026-11-05T18:08:30.498558+00:00"
+  },
+  {
+    "title": 12,
+    "part": "1006",
+    "name": "Regulation F - Debt Collection",
+    "publication_date": "2026-11-03",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1006",
+    "file": "/home/sagemaker-user/complaintiq/data/raw/ecfr/title_12_part_1006_2026-11-03.xml",
+    "bytes": 231338,
+    "sha256": "9138aa90547a14dac979a600a2f057f1005a5a90b74b1f4837e1ae1063f02432",
+    "downloaded_at_utc": "2026-11-05T18:08:33.802682+00:00"
+  },
+  {
+    "title": 12,
+    "part": "1022",
+    "name": "Regulation V - Fair Credit Reporting",
+    "publication_date": "2026-11-03",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1022",
+    "file": "/home/sagemaker-user/complaintiq/data/raw/ecfr/title_12_part_1022_2026-11-03.xml",
+    "bytes": 272782,
+    "sha256": "e73ec73afade4693b3bdc274bd5098016746544326adc1a363eff5add880acd1",
+    "downloaded_at_utc": "2026-11-05T18:08:35.564170+00:00"
+  },
+  {
+    "title": 12,
+    "part": "1026",
+    "name": "Regulation Z - Truth in Lending",
+    "publication_date": "2026-11-03",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1026",
+    "file": "/home/sagemaker-user/complaintiq/data/raw/ecfr/title_12_part_1026_2026-11-03.xml",
+    "bytes": 3946980,
+    "sha256": "d4b9040e205b27a1dd300fe0cf26c97eb173bee53cdaec758573a65450e500f0",
+    "downloaded_at_utc": "2026-11-05T18:08:40.939148+00:00"
+  },
+  {
+    "title": 16,
+    "part": "433",
+    "name": "FTC Holder Rule",
+    "publication_date": "2026-11-03",
+    "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-16.xml?part=433",
+    "file": "/home/sagemaker-user/complaintiq/data/raw/ecfr/title_16_part_433_2026-11-03.xml",
+    "bytes": 6582,
+    "sha256": "df7caff274c8ccc946904c00b6b4c333de2238a239c6455d2dd6ede11794b34b",
+    "downloaded_at_utc": "2026-11-05T18:08:44.921317+00:00"
+  }
+]
