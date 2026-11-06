@@ -1,0 +1,181 @@
+{
+  "phase": "Phase 7",
+  "scope": [
+    "G1",
+    "G2",
+    "G3"
+  ],
+  "status": "FAIL \u2014 CORRECTIONS REQUIRED",
+  "pass_count": 25,
+  "fail_count": 4,
+  "warning_count": 5,
+  "checks": [
+    {
+      "check": "G1 gold dataset",
+      "status": "PASS",
+      "detail": "60 records; expected 60"
+    },
+    {
+      "check": "G1 manual annotation template",
+      "status": "PASS",
+      "detail": "60 rows; 9 columns"
+    },
+    {
+      "check": "G1 unique complaint IDs",
+      "status": "FAIL",
+      "detail": "1 unique IDs"
+    },
+    {
+      "check": "G1 product and issue labels",
+      "status": "FAIL",
+      "detail": "Every record has product and issue"
+    },
+    {
+      "check": "G1 complaint narrative",
+      "status": "FAIL",
+      "detail": "Narrative availability"
+    },
+    {
+      "check": "G1 manual annotation columns",
+      "status": "FAIL",
+      "detail": "Missing columns: ['vulnerability']"
+    },
+    {
+      "check": "G2 analytics gold questions",
+      "status": "PASS",
+      "detail": "20 records; expected 20"
+    },
+    {
+      "check": "G2 expected reference results",
+      "status": "PASS",
+      "detail": "20 records; expected 20"
+    },
+    {
+      "check": "G2 reference result summary",
+      "status": "PASS",
+      "detail": "20 rows; 4 columns"
+    },
+    {
+      "check": "G2 unique question IDs",
+      "status": "PASS",
+      "detail": "20 unique IDs"
+    },
+    {
+      "check": "G2 expected result IDs",
+      "status": "PASS",
+      "detail": "20 unique IDs"
+    },
+    {
+      "check": "G2 expected result payloads",
+      "status": "PASS",
+      "detail": "Expected result payload field present"
+    },
+    {
+      "check": "G3 regulatory gold dataset",
+      "status": "PASS",
+      "detail": "20 records; expected 20"
+    },
+    {
+      "check": "G3 generated answers",
+      "status": "PASS",
+      "detail": "17 records; expected 17"
+    },
+    {
+      "check": "G3 critic results",
+      "status": "PASS",
+      "detail": "17 records; expected 17"
+    },
+    {
+      "check": "G3 abstention results",
+      "status": "PASS",
+      "detail": "3 records; expected 3"
+    },
+    {
+      "check": "G3 retrieval results",
+      "status": "PASS",
+      "detail": "17 rows; 9 columns"
+    },
+    {
+      "check": "G3 citation results",
+      "status": "PASS",
+      "detail": "17 rows; 7 columns"
+    },
+    {
+      "check": "G3 manual answer review",
+      "status": "PASS",
+      "detail": "17 rows; 16 columns"
+    },
+    {
+      "check": "G3 retrieval summary JSON",
+      "status": "PASS",
+      "detail": "Valid JSON object"
+    },
+    {
+      "check": "G3 unique question IDs",
+      "status": "PASS",
+      "detail": "20 unique IDs"
+    },
+    {
+      "check": "G3 answerable/abstention split",
+      "status": "PASS",
+      "detail": "Answerable=17, Abstention=3"
+    },
+    {
+      "check": "G3 abstention gold reasons",
+      "status": "PASS",
+      "detail": "All abstention cases have reasons"
+    },
+    {
+      "check": "G3 gold mapping statuses",
+      "status": "PASS",
+      "detail": "Unresolved: []"
+    },
+    {
+      "check": "G3 gold chunk references",
+      "status": "PASS",
+      "detail": "Missing chunk references: 0"
+    },
+    {
+      "check": "G3 answer generation coverage",
+      "status": "PASS",
+      "detail": "Successful=17, Failed=0"
+    },
+    {
+      "check": "G3 critic result coverage",
+      "status": "PASS",
+      "detail": "Critic records=17"
+    },
+    {
+      "check": "G3 abstention test coverage",
+      "status": "PASS",
+      "detail": "Three abstention test records; statuses={'UNKNOWN': 3}"
+    },
+    {
+      "check": "G3 manual review file coverage",
+      "status": "PASS",
+      "detail": "17 review rows"
+    }
+  ],
+  "warnings": [
+    {
+      "check": "G1 severity/vulnerability annotation",
+      "detail": "0/60 rows have at least one manual annotation. Complete manual labels before reporting severity/vulnerability metrics."
+    },
+    {
+      "check": "G3 critic outcomes",
+      "detail": "Passed=2, Failed=11, Unknown=4. Review critic verdicts and exceptions."
+    },
+    {
+      "check": "G3 abstention manual review",
+      "detail": "Node-level abstention screening is not equivalent to full graph-level end-to-end abstention validation. Review all three answers manually."
+    },
+    {
+      "check": "G3 retrieval metrics",
+      "detail": "Inspect retrieval columns and actual Recall@5/Recall@10/MRR values. Rows=17"
+    },
+    {
+      "check": "G3 answer-quality manual review",
+      "detail": "17 of 17 answers remain pending. Do not declare final G3 acceptance until reviewed."
+    }
+  ]
+}
