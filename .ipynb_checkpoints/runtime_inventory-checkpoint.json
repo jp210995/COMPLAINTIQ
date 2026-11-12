@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-11-06T11:59:03.734806+00:00",
+  "project_root": "/home/sagemaker-user/complaintiq",
+  "region": "us-east-1",
+  "bucket": "sagemaker-complaintiq-456427397380",
+  "models": {
+    "worker": "us.anthropic.claude-sonnet-4-6",
+    "judge": "us.anthropic.claude-opus-4-8",
+    "fast": "us.anthropic.claude-sonnet-4-6",
+    "embed": "amazon.titan-embed-text-v2:0"
+  },
+  "phase3_artifacts": [
+    "index/reg_vectors.npy",
+    "index/reg_chunks.jsonl",
+    "index/case_vectors.npy",
+    "index/case_chunks.jsonl"
+  ],
+  "phase4_artifacts": [
+    "src/llm.py",
+    "state/llm_cache.sqlite"
+  ],
+  "phase5_source": [
+    "notebooks/04_agents.ipynb"
+  ],
+  "phase6_source": [
+    "notebooks/05_graph.ipynb"
+  ],
+  "checkpoint_database": "state/checkpoints.sqlite"
+}

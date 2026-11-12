@@ -1,0 +1,160 @@
+{
+  "project": "ComplaintIQ",
+  "phase": 1,
+  "manifest_version": "1.0",
+  "generated_at_utc": "2026-11-05T20:11:08.909643+00:00",
+  "project_root": "/home/sagemaker-user/complaintiq",
+  "summary": {
+    "cfpb_csv_files": 2,
+    "ecfr_xml_files": 6,
+    "reference_pdf_files": 5,
+    "total_files": 13,
+    "total_cfpb_records": 37923,
+    "total_cfpb_narrative_records": 37923,
+    "total_pdf_pages": 1034
+  },
+  "files": [
+    {
+      "filename": "credit_card.csv",
+      "relative_path": "data/raw/cfpb/credit_card.csv",
+      "bytes": 33552641,
+      "sha256": "5a9bdae165647ba3b2fcc59760fd3e2e273cc8cfe8a676b9dba220f507771eb7",
+      "type": "cfpb_complaints",
+      "records": 18613,
+      "narrative_records": 18613,
+      "narrative_columns": [
+        "Consumer complaint narrative"
+      ]
+    },
+    {
+      "filename": "checking_or_savings_account.csv",
+      "relative_path": "data/raw/cfpb/checking_or_savings_account.csv",
+      "bytes": 32046860,
+      "sha256": "e5f02a141aa2a4bc2874cd96c430d880ce24cd21f4f477260a71b8d705d6e467",
+      "type": "cfpb_complaints",
+      "records": 19310,
+      "narrative_records": 19310,
+      "narrative_columns": [
+        "Consumer complaint narrative"
+      ]
+    },
+    {
+      "filename": "title_12_part_1002_2026-11-03.xml",
+      "relative_path": "data/raw/ecfr/title_12_part_1002_2026-11-03.xml",
+      "bytes": 504474,
+      "sha256": "e05a7a592ffaf9b5519222a2aeba5f3ea34908db52edba8d8ce8adf7485e8891",
+      "type": "ecfr_regulation",
+      "title": 12,
+      "part": "1002",
+      "name": "Regulation B - Equal Credit Opportunity",
+      "publication_date": "2026-11-03",
+      "source_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1002",
+      "root_element": "DIV5"
+    },
+    {
+      "filename": "title_12_part_1005_2026-11-03.xml",
+      "relative_path": "data/raw/ecfr/title_12_part_1005_2026-11-03.xml",
+      "bytes": 859423,
+      "sha256": "0669a14f83f836f4086de21514f3bcd40041784e50c444b415f4d8e1909a10d0",
+      "type": "ecfr_regulation",
+      "title": 12,
+      "part": "1005",
+      "name": "Regulation E - Electronic Fund Transfers",
+      "publication_date": "2026-11-03",
+      "source_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1005",
+      "root_element": "DIV5"
+    },
+    {
+      "filename": "title_12_part_1006_2026-11-03.xml",
+      "relative_path": "data/raw/ecfr/title_12_part_1006_2026-11-03.xml",
+      "bytes": 231338,
+      "sha256": "9138aa90547a14dac979a600a2f057f1005a5a90b74b1f4837e1ae1063f02432",
+      "type": "ecfr_regulation",
+      "title": 12,
+      "part": "1006",
+      "name": "Regulation F - Debt Collection",
+      "publication_date": "2026-11-03",
+      "source_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1006",
+      "root_element": "DIV5"
+    },
+    {
+      "filename": "title_12_part_1022_2026-11-03.xml",
+      "relative_path": "data/raw/ecfr/title_12_part_1022_2026-11-03.xml",
+      "bytes": 272782,
+      "sha256": "e73ec73afade4693b3bdc274bd5098016746544326adc1a363eff5add880acd1",
+      "type": "ecfr_regulation",
+      "title": 12,
+      "part": "1022",
+      "name": "Regulation V - Fair Credit Reporting",
+      "publication_date": "2026-11-03",
+      "source_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1022",
+      "root_element": "DIV5"
+    },
+    {
+      "filename": "title_12_part_1026_2026-11-03.xml",
+      "relative_path": "data/raw/ecfr/title_12_part_1026_2026-11-03.xml",
+      "bytes": 3946980,
+      "sha256": "d4b9040e205b27a1dd300fe0cf26c97eb173bee53cdaec758573a65450e500f0",
+      "type": "ecfr_regulation",
+      "title": 12,
+      "part": "1026",
+      "name": "Regulation Z - Truth in Lending",
+      "publication_date": "2026-11-03",
+      "source_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-12.xml?part=1026",
+      "root_element": "DIV5"
+    },
+    {
+      "filename": "title_16_part_433_2026-11-03.xml",
+      "relative_path": "data/raw/ecfr/title_16_part_433_2026-11-03.xml",
+      "bytes": 6582,
+      "sha256": "df7caff274c8ccc946904c00b6b4c333de2238a239c6455d2dd6ede11794b34b",
+      "type": "ecfr_regulation",
+      "title": 16,
+      "part": "433",
+      "name": "FTC Holder Rule",
+      "publication_date": "2026-11-03",
+      "source_url": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-03/title-16.xml?part=433",
+      "root_element": "DIV5"
+    },
+    {
+      "filename": "exam_manual_v2_2012.pdf",
+      "relative_path": "data/raw/pdf/exam_manual_v2_2012.pdf",
+      "bytes": 7486372,
+      "sha256": "ffa32ad54c6576c2f14846c87f7da080348e4baf6625173913a2b0bd1f970c61",
+      "type": "reference_pdf",
+      "pages": 924
+    },
+    {
+      "filename": "sh_issue17_2018-09.pdf",
+      "relative_path": "data/raw/pdf/sh_issue17_2018-09.pdf",
+      "bytes": 195546,
+      "sha256": "8516bc26fdf053929667b1499707b3c8a24ed83bcc97807385801aac4887cbff",
+      "type": "reference_pdf",
+      "pages": 23
+    },
+    {
+      "filename": "sh_issue18_2019-03.pdf",
+      "relative_path": "data/raw/pdf/sh_issue18_2019-03.pdf",
+      "bytes": 399852,
+      "sha256": "e9b964ceb845c398720e657756032eb4d02799a550d55a770d8ff6c2a8b5ed4e",
+      "type": "reference_pdf",
+      "pages": 21
+    },
+    {
+      "filename": "sh_issue22_2020-09.pdf",
+      "relative_path": "data/raw/pdf/sh_issue22_2020-09.pdf",
+      "bytes": 463021,
+      "sha256": "9bfb6cb15965ab98f2d643d2601b927f3ac32b0eac2f5a68ac84cbfed1e12f88",
+      "type": "reference_pdf",
+      "pages": 38
+    },
+    {
+      "filename": "sh_issue23_2021-01.pdf",
+      "relative_path": "data/raw/pdf/sh_issue23_2021-01.pdf",
+      "bytes": 774257,
+      "sha256": "eefa345f401083838496ff87b527e454baf17a12e6943b1e96108a4304e1a14e",
+      "type": "reference_pdf",
+      "pages": 28
+    }
+  ]
+}

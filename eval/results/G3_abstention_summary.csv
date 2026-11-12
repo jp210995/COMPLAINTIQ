@@ -1,0 +1,4 @@
+question_id,evidence_count,refusal_detected,abstention_result,execution_status
+G3-18,8,False,MANUAL_REVIEW_REQUIRED,SUCCESS
+G3-19,8,False,MANUAL_REVIEW_REQUIRED,SUCCESS
+G3-20,8,False,MANUAL_REVIEW_REQUIRED,SUCCESS

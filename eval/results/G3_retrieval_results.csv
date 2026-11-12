@@ -1,0 +1,18 @@
+question_id,question,gold_chunk_count,retrieved_chunk_count,recall_at_5,recall_at_10,reciprocal_rank,hit_at_5,hit_at_10
+G3-01,"After a consumer notifies a financial institution of an electronic fund transfer error, what investigation and resolution steps are required, and within what time limits?",31,10,0.0967741935483871,0.25806451612903225,1.0,1,1
+G3-02,What liability limits apply when an access device is lost or stolen and an unauthorized electronic fund transfer occurs?,23,10,0.17391304347826086,0.30434782608695654,1.0,1,1
+G3-03,What initial disclosures must a financial institution provide for an electronic fund transfer service?,33,10,0.12121212121212122,0.12121212121212122,1.0,1,1
+G3-04,What are the requirements for providing periodic statements for accounts subject to Regulation E?,23,10,0.08695652173913043,0.17391304347826086,1.0,1,1
+G3-05,"What constitutes a billing error on an open-end credit account, and what must a creditor do after receiving a proper billing-error notice?",14,10,0.2857142857142857,0.2857142857142857,1.0,1,1
+G3-06,What limits apply to a consumer's liability for unauthorized use of a credit card?,15,10,0.13333333333333333,0.2,1.0,1,1
+G3-07,What disclosures must be provided before opening an open-end credit account?,133,10,0.03007518796992481,0.05263157894736842,1.0,1,1
+G3-08,What duties does a furnisher have after receiving a direct dispute from a consumer about information furnished to a consumer reporting agency?,10,10,0.3,0.5,0.5,1,1
+G3-09,What policies and procedures must furnishers maintain to ensure the accuracy and integrity of information they report to consumer reporting agencies?,4,10,0.75,1.0,0.5,1,1
+G3-10,"What types of direct disputes are excluded from the furnisher investigation requirements, and what happens when a dispute is frivolous or irrelevant?",10,10,0.4,0.5,1.0,1,1
+G3-11,What restrictions apply to the frequency and timing of telephone calls by a debt collector to a consumer?,3,10,0.6666666666666666,1.0,1.0,1,1
+G3-12,"When and how may a debt collector communicate with a consumer, and what restrictions apply to communication at inconvenient times or places?",10,10,0.4,0.6,1.0,1,1
+G3-13,"What information must a debt collector provide in a validation notice, and when must it be sent?",10,10,0.5,0.9,1.0,1,1
+G3-14,What account-opening disclosures must a depository institution provide under Regulation DD?,25,10,0.04,0.16,0.3333333333333333,1,1
+G3-15,What rules govern the payment of interest on interest-bearing deposit accounts?,8,10,0.25,0.375,0.25,1,1
+G3-16,What requirements apply to the calculation of interest on deposit accounts?,8,10,0.125,0.25,1.0,1,1
+G3-17,What consumer-protection or compliance findings concerning deposit accounts are described in the CFPB Supervisory Highlights documents included in the corpus?,1,10,0.0,0.0,0.0,0,0

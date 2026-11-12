@@ -1,0 +1,53 @@
+{
+  "phase": 4,
+  "phase_name": "Bedrock Access Layer",
+  "timestamp_utc": "2026-11-06T07:46:48.852994+00:00",
+  "region": "us-east-1",
+  "models": {
+    "worker": "us.anthropic.claude-sonnet-4-6",
+    "judge": "us.anthropic.claude-opus-4-8"
+  },
+  "tests": {
+    "configuration_loaded": true,
+    "bedrock_region_verified": true,
+    "worker_pydantic_validation": true,
+    "judge_pydantic_validation": true,
+    "cache_hit_verified": true,
+    "sqlite_cache_exists": true
+  },
+  "usage": {
+    "ledger": {
+      "calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "total_tokens": 0,
+      "estimated_cost_usd": 0.0,
+      "latency": {
+        "calls": 0,
+        "average_ms": 0,
+        "p50_ms": 0,
+        "p95_ms": 0
+      },
+      "models_used": []
+    },
+    "cache": {
+      "cache_path": "/home/sagemaker-user/complaintiq/state/llm_cache.sqlite",
+      "cached_responses": 4
+    },
+    "models_without_temperature": []
+  },
+  "pricing_configuration": {
+    "sonnet-4-6": [
+      null,
+      null
+    ],
+    "opus-4-8": [
+      null,
+      null
+    ],
+    "haiku": [
+      null,
+      null
+    ]
+  }
+}

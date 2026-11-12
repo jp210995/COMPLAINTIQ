@@ -1,0 +1,84 @@
+{
+  "phase": "3",
+  "project": "ComplaintIQ",
+  "created_utc": "2026-11-06T06:01:18Z",
+  "region": "us-east-1",
+  "embedding_model": "amazon.titan-embed-text-v2:0",
+  "embedding_dimensions": 1024,
+  "dense_index": "FAISS IndexFlatIP",
+  "sparse_index": "BM25Okapi",
+  "fusion": "Reciprocal Rank Fusion",
+  "rrf_k": 60,
+  "complaint_sample_size": 3000,
+  "complaint_sample_seed": 42,
+  "source_counts": {
+    "document_chunks": 1784,
+    "jan_may_pool": 31813,
+    "june_holdout": 6110
+  },
+  "june_holdout_indexed": false,
+  "exact_citation_test_passed": true,
+  "regulatory_smoke_tests": [
+    {
+      "query": "error resolution timeline electronic fund transfer",
+      "purpose": "Regulation E error resolution",
+      "expected_terms": "1005.11|12cfr1005.11",
+      "expected_found_top5": true,
+      "top5_chunk_ids": "12CFR1005_1005.11_chunk_0001|12CFR1005_1005.11_chunk_0003|12CFR1005_1005.33_chunk_0004|12CFR1005_1005.14_chunk_0002|12CFR1005_1005.8_chunk_0001"
+    },
+    {
+      "query": "billing error notice credit card",
+      "purpose": "Credit card billing error",
+      "expected_terms": "1026.13|12cfr1026.13",
+      "expected_found_top5": true,
+      "top5_chunk_ids": "12CFR1026_1026.13_chunk_0001|12CFR1026_1026.13_chunk_0002|12CFR1026_1026.13_chunk_0003|12CFR1026_1026.13_chunk_0004|12CFR1026_1026.7_chunk_0004"
+    },
+    {
+      "query": "fair credit reporting accuracy investigation dispute",
+      "purpose": "Credit reporting dispute",
+      "expected_terms": "1022|fcra",
+      "expected_found_top5": true,
+      "top5_chunk_ids": "exam_manual_v2_2012_page_0664_chunk_0001|sh_issue22_2020-09_page_0004_chunk_0001|exam_manual_v2_2012_page_0581_chunk_0001|exam_manual_v2_2012_page_0636_chunk_0001|sh_issue23_2021-01_page_0017_chunk_0001"
+    },
+    {
+      "query": "debt collector validation notice dispute time period",
+      "purpose": "Debt collection validation",
+      "expected_terms": "1006|validation",
+      "expected_found_top5": true,
+      "top5_chunk_ids": "12CFR1006_1006.34_chunk_0003|12CFR1006_1006.34_chunk_0002|12CFR1006_1006.38_chunk_0001|12CFR1006_1006.34_chunk_0006|12CFR1006_1006.34_chunk_0001"
+    },
+    {
+      "query": "equal credit opportunity adverse action notice",
+      "purpose": "ECOA adverse action",
+      "expected_terms": "1002|adverse action",
+      "expected_found_top5": true,
+      "top5_chunk_ids": "12CFR1002_1002.9_chunk_0002|exam_manual_v2_2012_page_0219_chunk_0001|exam_manual_v2_2012_page_0199_chunk_0001|12CFR1002_1002.9_chunk_0001|12CFR1002_1002.2_chunk_0001"
+    }
+  ],
+  "artifacts": {
+    "reg_vectors.npy": {
+      "bytes": 7307392,
+      "sha256": "ce9fde2a1bac9ca87161acdc22c0f2f31e289c6644b00f73ff03e215623afa6c"
+    },
+    "reg_chunks.jsonl": {
+      "bytes": 4504700,
+      "sha256": "1a7d68c139f8b7c84091fdfe8c216ef8dc9f6ac9b92c0898737dbf756a0e53a2"
+    },
+    "case_vectors.npy": {
+      "bytes": 12288128,
+      "sha256": "528c13a8b4a9d9ed4cf390ee748b3e0cdfe689db59dc8a9b3b2579e86a943c3a"
+    },
+    "case_chunks.jsonl": {
+      "bytes": 4897915,
+      "sha256": "f0ff5ded5d5916b92d616563cba71d3467760cf3b873ed9fe1080cd1584c341b"
+    },
+    "reg_retrieval_smoke_tests.csv": {
+      "bytes": 1344,
+      "sha256": "59245ede24c096c1f6016778fd5ba9845ea0be7c8a63f2e14335520dec007ed2"
+    },
+    "case_retrieval_smoke_tests.jsonl": {
+      "bytes": 3705,
+      "sha256": "88d3d3cc2851db17af44b4be0a97de1c33047251f25071c92efed33b298a5909"
+    }
+  }
+}

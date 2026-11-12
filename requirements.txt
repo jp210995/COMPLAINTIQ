@@ -1,0 +1,16 @@
+boto3==1.43.106
+botocore==1.43.106
+requests==2.34.2
+pandas==2.3.3
+numpy==1.26.4
+duckdb==1.5.1
+faiss-cpu==1.15.1
+rank-bm25==0.2.2
+sqlglot==30.23.0
+langgraph==1.2.20
+langchain==0.3.27
+langchain-aws==0.2.35
+streamlit==1.66.1
+pypdf==6.21.4
+tiktoken==0.14.0
+sentence-transformers==6.2.0
