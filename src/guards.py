@@ -3,14 +3,14 @@ import re
 from .agents.state import CIQState
 
 PII = [
-    (re.compile(r"\\b\\d{3}-\\d{2}-\\d{4}\\b"), "[SSN]"),
-    (re.compile(r"\\b(?:\\d[ -]?){13,19}\\b"), "[CARD_OR_ACCOUNT]"),
-    (re.compile(r"[\\w.+-]+@[\\w-]+\\.[\\w.]+"), "[EMAIL]"),
-    (re.compile(r"\\(?\\b\\d{3}\\)?[ .-]?\\d{3}[ .-]?\\d{4}\\b"), "[PHONE]"),
+    (re.compile(r"\b\d{3}-\d{2}-\d{4}\b"), "[SSN]"),
+    (re.compile(r"\b(?:\d[ -]?){13,19}\b"), "[CARD_OR_ACCOUNT]"),
+    (re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+"), "[EMAIL]"),
+    (re.compile(r"\(?\b\d{3}\)?[ .-]?\d{3}[ .-]?\d{4}\b"), "[PHONE]"),
 ]
 
 INJECTION = re.compile(
-    r"ignore\\s+(all|any|previous|your)\\s+(instructions|rules)"
+    r"ignore\s+(?:(?:all|any|your)\s+)?(?:previous\s+)?(?:instructions|rules)"
     r"|system prompt|you are now|developer mode",
     re.IGNORECASE,
 )
