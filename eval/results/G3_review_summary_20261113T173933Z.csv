@@ -1,0 +1,7 @@
+Metric,Value
+Total G3 questions,17.0
+Automated critic PASS,17.0
+Manually reviewed,3.0
+Manual review pending,14.0
+Manual review completion percentage,17.65
+Automated critic failures,0.0
