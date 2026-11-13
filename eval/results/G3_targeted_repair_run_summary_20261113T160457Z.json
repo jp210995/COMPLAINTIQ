@@ -1,0 +1,13 @@
+{
+  "run_id": "20261113T160457Z",
+  "questions_targeted": 15,
+  "questions_repaired_and_evaluated": 15,
+  "repair_errors": 0,
+  "critic_passes_after_repair": 10,
+  "critic_revisions_after_repair": 5,
+  "unresolved": 0,
+  "backup_directory": "/home/sagemaker-user/complaintiq/eval/results/correction_backups/20261113T160457Z_targeted_repair",
+  "repaired_answers": "/home/sagemaker-user/complaintiq/eval/results/G3_repaired_answers_20261113T160457Z.jsonl",
+  "repair_summary": "/home/sagemaker-user/complaintiq/eval/results/G3_repair_summary_20261113T160457Z.csv",
+  "repair_errors_file": "/home/sagemaker-user/complaintiq/eval/results/G3_repair_errors_20261113T160457Z.jsonl"
+}

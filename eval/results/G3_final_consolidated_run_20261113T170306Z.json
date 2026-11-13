@@ -1,0 +1,17 @@
+{
+  "run_id": "20261113T170306Z",
+  "total_questions": 17,
+  "critic_passes": 17,
+  "critic_revisions": 0,
+  "unique_question_ids": 17,
+  "original_pass_records": 2,
+  "first_repair_pass_records": 10,
+  "final_targeted_correction_records": 5,
+  "all_question_ids_present": true,
+  "all_critic_pass": true,
+  "source_files_modified": false,
+  "s3_writes": false,
+  "checkpoint_writes": false,
+  "consolidated_jsonl": "/home/sagemaker-user/complaintiq/eval/results/G3_final_consolidated_20261113T170306Z.jsonl",
+  "summary_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_final_consolidated_summary_20261113T170306Z.csv"
+}
