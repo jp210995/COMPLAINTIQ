@@ -410,54 +410,66 @@ def chat_json(
     **kwargs
 ):
     """
-    Requests JSON from the model and validates it using
-    Pydantic.
-
-    The model gets one repair attempt if its first response
-    is invalid.
+    Request structured JSON from Bedrock and validate with Pydantic.
+    Allows an initial response and up to two repair attempts.
     """
 
     json_system = (
         system
-        + "\n\nReturn ONLY one valid JSON object. "
-          "Do not include markdown fences or prose."
+        + "\n\nReturn exactly one valid JSON object matching the "
+          "requested schema. Do not include markdown fences, commentary, "
+          "analysis, or prose outside the JSON object."
     )
+
+    def extract_validated_object(raw_text):
+        decoder = json.JSONDecoder()
+
+        for position, character in enumerate(raw_text):
+            if character != "{":
+                continue
+
+            try:
+                obj, _ = decoder.raw_decode(raw_text[position:])
+                return schema.model_validate(obj)
+            except (ValueError, ValidationError):
+                continue
+
+        raise ValueError(
+            "No valid JSON object matching the requested schema was found."
+        )
 
     raw = chat(
         model_id=model_id,
         system=json_system,
         user=user,
-        **kwargs
+        **dict(kwargs)
     )
 
-    for attempt in range(2):
+    last_error = None
 
+    for attempt in range(3):
         try:
-
-            start = raw.find("{")
-            end = raw.rfind("}")
-
-            if start == -1 or end == -1 or end < start:
-                raise ValueError("No JSON object found")
-
-            blob = raw[start:end + 1]
-
-            return schema.model_validate_json(blob)
+            return extract_validated_object(raw)
 
         except (ValueError, ValidationError) as exc:
+            last_error = exc
 
-            if attempt == 1:
-                raise
+            if attempt == 2:
+                break
 
             repair_user = (
                 user
-                + "\n\nYour previous response was invalid."
-                + f"\nValidation error: {str(exc)}"
-                + "\nReturn valid JSON matching this schema:"
+                + "\n\nYour previous response could not be parsed "
+                  "or validated."
+                + f"\nValidation error: {str(exc)[:1500]}"
+                + "\nReturn ONLY one corrected JSON object. "
+                  "Do not include reasoning or commentary."
+                + "\nRequired JSON schema:\n"
                 + json.dumps(schema.model_json_schema(), indent=2)
             )
 
             repair_kwargs = dict(kwargs)
+            repair_kwargs.pop("use_cache", None)
             repair_kwargs["use_cache"] = False
 
             raw = chat(
@@ -466,6 +478,10 @@ def chat_json(
                 user=repair_user,
                 **repair_kwargs
             )
+
+    raise ValueError(
+        f"Structured response failed after 3 attempts: {last_error}"
+    ) from last_error
 
 
 # ============================================================

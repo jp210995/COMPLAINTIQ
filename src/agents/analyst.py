@@ -6,7 +6,6 @@ from pydantic import BaseModel
 
 from .state import CIQState
 from ..tools import guard_sql, run_sql
-from ..tools import guard_sql, run_sql
 
 
 ALLOWED_TABLES = {"v_complaints"}

@@ -29,20 +29,23 @@ def after_analyst(state: CIQState) -> str:
 
 
 def after_critic(state: CIQState) -> str:
+    """
+    Require human review for every successful critic result.
+    Failed reviews return to drafting until the revision limit,
+    then escalate to human review.
+    """
+
     critique = state.get("critique", {})
     passed = critique.get("pass", False)
     revisions = state.get("revisions", 0)
-    intent = state.get("intent")
 
-    if not passed:
-        if revisions < 2:
-            return "drafter"
+    if passed:
         return "human"
 
-    if intent in {"TRIAGE", "BRIEF"}:
-        return "human"
+    if revisions < 2:
+        return "drafter"
 
-    return "publish"
+    return "human"
 
 
 def after_human(state: CIQState):
