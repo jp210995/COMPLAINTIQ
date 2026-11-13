@@ -457,12 +457,14 @@ def chat_json(
                 + json.dumps(schema.model_json_schema(), indent=2)
             )
 
+            repair_kwargs = dict(kwargs)
+            repair_kwargs["use_cache"] = False
+
             raw = chat(
                 model_id=model_id,
                 system=json_system,
                 user=repair_user,
-                use_cache=False,
-                **kwargs
+                **repair_kwargs
             )
 
 
