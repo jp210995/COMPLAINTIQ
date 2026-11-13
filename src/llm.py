@@ -13,7 +13,7 @@ from botocore.config import Config
 from botocore.exceptions import ClientError
 from pydantic import BaseModel, ValidationError
 
-from config import REGION, STATE
+from .config import REGION, STATE
 
 
 # ============================================================
