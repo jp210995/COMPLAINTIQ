@@ -44,3 +44,8 @@ def refuse_node(state: CIQState) -> dict:
         ),
         "trace": [{"node": "refuse", "reason": "OUT_OF_SCOPE"}],
     }
+
+
+def after_human(state: CIQState) -> str:
+    action = state.get("human_decision", {}).get("action")
+    return "publish" if action in {"approve", "edit"} else "END"

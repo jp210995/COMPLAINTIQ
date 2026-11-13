@@ -1,3 +1,4 @@
+import re
 from .state import CIQState
 
 
@@ -59,6 +60,8 @@ def cases_node(state: CIQState) -> dict:
 
 
 def research_node(state: CIQState) -> dict:
+    """Retrieve regulatory evidence while preserving source provenance."""
+
     if _REG_INDEX is None:
         raise RuntimeError(
             "REG_INDEX is not configured. Load the existing Phase 3 "
@@ -80,10 +83,49 @@ def research_node(state: CIQState) -> dict:
     evidence = []
 
     for hit in hits:
+
+        source_type = hit.get("source_type")
+        source_file = hit.get("source_file")
+        source_id = hit.get("source_id")
+        citation = hit.get("citation")
+
+        # PDF page numbers are derived only from existing provenance.
+        page_number = None
+
+        if source_type == "pdf":
+
+            page_match = re.search(
+                r"_page_(\d+)(?:_|$)",
+                str(source_id or "")
+            )
+
+            if not page_match:
+                page_match = re.search(
+                    r"\bpage\s+(\d+)\b",
+                    str(citation or ""),
+                    re.IGNORECASE
+                )
+
+            if page_match:
+                page_number = int(page_match.group(1))
+
         evidence.append({
+            # Original chunk identity
             "chunk_id": hit.get("chunk_id"),
-            "source": hit.get("source"),
-            "page": hit.get("page"),
+            "chunk_number": hit.get("chunk_number"),
+
+            # Full original provenance
+            "source_type": source_type,
+            "source_id": source_id,
+            "source_file": source_file,
+            "citation": citation,
+            "title": hit.get("title"),
+
+            # Backward-compatible aliases
+            "source": source_file,
+            "page": page_number,
+
+            # Retrieved content and score
             "text": hit.get("text", ""),
             "rrf": hit.get("rrf"),
         })
