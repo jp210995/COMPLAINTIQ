@@ -1,0 +1,181 @@
+{
+  "run_timestamp_utc": "2026-11-16T11:56:52.153237+00:00",
+  "input_file": "/home/sagemaker-user/complaintiq/eval/results/G3_all_17_reviews_20261113T173933Z.csv",
+  "baseline_opus_file": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_evaluation_20261116T112452Z.csv",
+  "output_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_revised_candidates.csv",
+  "evidence_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/evidence_packs.jsonl",
+  "progress_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/progress.jsonl",
+  "error_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/errors.jsonl",
+  "worker_model": "us.anthropic.claude-sonnet-4-6",
+  "total_questions": 17,
+  "questions_regenerated": 15,
+  "successful_generations": 15,
+  "generation_errors": 0,
+  "preserved_controls": 2,
+  "max_evidence_chars": 30000,
+  "max_evidence_chunks": 16,
+  "query_expansion_enabled": true,
+  "full_chunk_serialization": true,
+  "records": [
+    {
+      "question_id": "G3-01",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 58,
+      "selected_chunk_count": 11,
+      "evidence_chars": 29956,
+      "answer_chars": 6547,
+      "timestamp_utc": "2026-11-16T11:52:39.969579+00:00"
+    },
+    {
+      "question_id": "G3-02",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 54,
+      "selected_chunk_count": 12,
+      "evidence_chars": 29406,
+      "answer_chars": 4990,
+      "timestamp_utc": "2026-11-16T11:52:55.598988+00:00"
+    },
+    {
+      "question_id": "G3-03",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 69,
+      "selected_chunk_count": 12,
+      "evidence_chars": 29643,
+      "answer_chars": 6523,
+      "timestamp_utc": "2026-11-16T11:53:16.385271+00:00"
+    },
+    {
+      "question_id": "G3-04",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 70,
+      "selected_chunk_count": 13,
+      "evidence_chars": 29684,
+      "answer_chars": 6527,
+      "timestamp_utc": "2026-11-16T11:53:35.814367+00:00"
+    },
+    {
+      "question_id": "G3-05",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 64,
+      "selected_chunk_count": 11,
+      "evidence_chars": 29277,
+      "answer_chars": 7453,
+      "timestamp_utc": "2026-11-16T11:53:58.585210+00:00"
+    },
+    {
+      "question_id": "G3-06",
+      "status": "CONTROL_PRESERVED",
+      "recommendation": "ACCEPT"
+    },
+    {
+      "question_id": "G3-07",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 64,
+      "selected_chunk_count": 11,
+      "evidence_chars": 29402,
+      "answer_chars": 6849,
+      "timestamp_utc": "2026-11-16T11:54:19.714030+00:00"
+    },
+    {
+      "question_id": "G3-08",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 52,
+      "selected_chunk_count": 12,
+      "evidence_chars": 29398,
+      "answer_chars": 5514,
+      "timestamp_utc": "2026-11-16T11:54:37.331604+00:00"
+    },
+    {
+      "question_id": "G3-09",
+      "status": "CONTROL_PRESERVED",
+      "recommendation": "ACCEPT"
+    },
+    {
+      "question_id": "G3-10",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 64,
+      "selected_chunk_count": 12,
+      "evidence_chars": 29555,
+      "answer_chars": 5099,
+      "timestamp_utc": "2026-11-16T11:54:52.497058+00:00"
+    },
+    {
+      "question_id": "G3-11",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 71,
+      "selected_chunk_count": 14,
+      "evidence_chars": 29993,
+      "answer_chars": 4755,
+      "timestamp_utc": "2026-11-16T11:55:07.598758+00:00"
+    },
+    {
+      "question_id": "G3-12",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 63,
+      "selected_chunk_count": 13,
+      "evidence_chars": 29310,
+      "answer_chars": 6421,
+      "timestamp_utc": "2026-11-16T11:55:27.320624+00:00"
+    },
+    {
+      "question_id": "G3-13",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 63,
+      "selected_chunk_count": 13,
+      "evidence_chars": 29678,
+      "answer_chars": 6657,
+      "timestamp_utc": "2026-11-16T11:55:47.037711+00:00"
+    },
+    {
+      "question_id": "G3-14",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 63,
+      "selected_chunk_count": 13,
+      "evidence_chars": 29884,
+      "answer_chars": 5706,
+      "timestamp_utc": "2026-11-16T11:56:04.492915+00:00"
+    },
+    {
+      "question_id": "G3-15",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 56,
+      "selected_chunk_count": 14,
+      "evidence_chars": 29863,
+      "answer_chars": 6425,
+      "timestamp_utc": "2026-11-16T11:56:22.142076+00:00"
+    },
+    {
+      "question_id": "G3-16",
+      "status": "SUCCESS",
+      "recommendation": "REVISE",
+      "retrieved_candidate_count": 58,
+      "selected_chunk_count": 16,
+      "evidence_chars": 29975,
+      "answer_chars": 5954,
+      "timestamp_utc": "2026-11-16T11:56:40.721653+00:00"
+    },
+    {
+      "question_id": "G3-17",
+      "status": "SUCCESS",
+      "recommendation": "INSUFFICIENT_EVIDENCE",
+      "retrieved_candidate_count": 75,
+      "selected_chunk_count": 16,
+      "evidence_chars": 29598,
+      "answer_chars": 3875,
+      "timestamp_utc": "2026-11-16T11:56:52.137470+00:00"
+    }
+  ]
+}

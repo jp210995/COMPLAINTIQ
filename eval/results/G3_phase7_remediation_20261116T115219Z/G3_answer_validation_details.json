@@ -1,0 +1,1095 @@
+{
+  "validation_timestamp_utc": "2026-11-16T11:59:56.022005+00:00",
+  "candidate_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_revised_candidates.csv",
+  "baseline_file": "/home/sagemaker-user/complaintiq/eval/results/G3_all_17_reviews_20261113T173933Z.csv",
+  "evidence_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/evidence_packs.jsonl",
+  "index_file": "/home/sagemaker-user/complaintiq/index/reg_chunks.jsonl",
+  "total_questions": 17,
+  "structural_passes": 15,
+  "control_passes": 2,
+  "failures": 0,
+  "details": {
+    "G3-01": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 6547 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "11 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "5 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "6547 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1005_1005.11_chunk_0001",
+        "12CFR1005_1005.11_chunk_0002",
+        "12CFR1005_1005.11_chunk_0003",
+        "exam_manual_v2_2012_page_0701_chunk_0001",
+        "exam_manual_v2_2012_page_0702_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1005_1005.11_chunk_0001",
+        "12CFR1005_1005.11_chunk_0002",
+        "12CFR1005_1005.11_chunk_0003",
+        "12CFR1005_1005.18_chunk_0022",
+        "12CFR1005_1005.33_chunk_0003",
+        "12CFR1005_1005.33_chunk_0004",
+        "12CFR1026_1026.13_chunk_0004",
+        "exam_manual_v2_2012_page_0700_chunk_0001",
+        "exam_manual_v2_2012_page_0701_chunk_0001",
+        "exam_manual_v2_2012_page_0702_chunk_0001",
+        "exam_manual_v2_2012_page_0734_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-02": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 4990 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "12 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "6 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "4990 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1005_1005.14_chunk_0001",
+        "12CFR1005_1005.6_chunk_0001",
+        "exam_manual_v2_2012_page_0697_chunk_0001",
+        "exam_manual_v2_2012_page_0698_chunk_0001",
+        "exam_manual_v2_2012_page_0699_chunk_0001",
+        "exam_manual_v2_2012_page_0728_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1005_1005.14_chunk_0001",
+        "12CFR1005_1005.5_chunk_0001",
+        "12CFR1005_1005.6_chunk_0001",
+        "12CFR1005_1005.7_chunk_0001",
+        "exam_manual_v2_2012_page_0686_chunk_0001",
+        "exam_manual_v2_2012_page_0697_chunk_0001",
+        "exam_manual_v2_2012_page_0698_chunk_0001",
+        "exam_manual_v2_2012_page_0699_chunk_0001",
+        "exam_manual_v2_2012_page_0699_chunk_0002",
+        "exam_manual_v2_2012_page_0727_chunk_0001",
+        "exam_manual_v2_2012_page_0728_chunk_0001",
+        "exam_manual_v2_2012_page_0741_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-03": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 6523 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "12 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "6 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "6523 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1005_1005.4_chunk_0001",
+        "12CFR1005_1005.7_chunk_0001",
+        "exam_manual_v2_2012_page_0685_chunk_0001",
+        "exam_manual_v2_2012_page_0685_chunk_0002",
+        "exam_manual_v2_2012_page_0686_chunk_0001",
+        "exam_manual_v2_2012_page_0687_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1005_1005.12_chunk_0002",
+        "12CFR1005_1005.18_chunk_0021",
+        "12CFR1005_1005.3_chunk_0001",
+        "12CFR1005_1005.4_chunk_0001",
+        "12CFR1005_1005.7_chunk_0001",
+        "exam_manual_v2_2012_page_0685_chunk_0001",
+        "exam_manual_v2_2012_page_0685_chunk_0002",
+        "exam_manual_v2_2012_page_0686_chunk_0001",
+        "exam_manual_v2_2012_page_0687_chunk_0001",
+        "exam_manual_v2_2012_page_0712_chunk_0001",
+        "exam_manual_v2_2012_page_0729_chunk_0001",
+        "exam_manual_v2_2012_page_0752_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-04": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 6527 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "13 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "6 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "6527 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1005_1005.18_chunk_0020",
+        "12CFR1005_1005.9_chunk_0002",
+        "exam_manual_v2_2012_page_0703_chunk_0001",
+        "exam_manual_v2_2012_page_0704_chunk_0001",
+        "exam_manual_v2_2012_page_0704_chunk_0002",
+        "exam_manual_v2_2012_page_0705_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1005_1005.18_chunk_0020",
+        "12CFR1005_1005.1_chunk_0001",
+        "12CFR1005_1005.9_chunk_0002",
+        "12CFR1026_1026.41_chunk_0006",
+        "exam_manual_v2_2012_page_0138_chunk_0001",
+        "exam_manual_v2_2012_page_0683_chunk_0001",
+        "exam_manual_v2_2012_page_0703_chunk_0001",
+        "exam_manual_v2_2012_page_0704_chunk_0001",
+        "exam_manual_v2_2012_page_0704_chunk_0002",
+        "exam_manual_v2_2012_page_0705_chunk_0001",
+        "exam_manual_v2_2012_page_0731_chunk_0001",
+        "exam_manual_v2_2012_page_0749_chunk_0001",
+        "sh_issue22_2020-09_page_0014_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-05": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 7453 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "11 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "4 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "7453 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1026_1026.13_chunk_0001",
+        "12CFR1026_1026.13_chunk_0002",
+        "12CFR1026_1026.13_chunk_0003",
+        "12CFR1026_1026.13_chunk_0004"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1005_1005.11_chunk_0002",
+        "12CFR1026_1026.13_chunk_0001",
+        "12CFR1026_1026.13_chunk_0002",
+        "12CFR1026_1026.13_chunk_0003",
+        "12CFR1026_1026.13_chunk_0004",
+        "12CFR1026_1026.28_chunk_0002",
+        "12CFR1026_1026.7_chunk_0004",
+        "12CFR1026_1026.9_chunk_0007",
+        "exam_manual_v2_2012_page_0478_chunk_0001",
+        "exam_manual_v2_2012_page_0700_chunk_0001",
+        "sh_issue22_2020-09_page_0029_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-06": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 2429 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "accepted_answer_preserved": {
+          "pass": true,
+          "detail": ""
+        }
+      },
+      "issues": []
+    },
+    "G3-07": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 6849 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "11 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "5 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "6849 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1026_1026.5_chunk_0003",
+        "12CFR1026_1026.6_chunk_0003",
+        "12CFR1026_1026.6_chunk_0006",
+        "12CFR1026_1026.6_chunk_0008",
+        "exam_manual_v2_2012_page_0426_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1026_1026.1_chunk_0003",
+        "12CFR1026_1026.32_chunk_0008",
+        "12CFR1026_1026.5_chunk_0003",
+        "12CFR1026_1026.5_chunk_0004",
+        "12CFR1026_1026.6_chunk_0003",
+        "12CFR1026_1026.6_chunk_0006",
+        "12CFR1026_1026.6_chunk_0008",
+        "12CFR1026_1026.9_chunk_0002",
+        "exam_manual_v2_2012_page_0355_chunk_0001",
+        "exam_manual_v2_2012_page_0426_chunk_0001",
+        "exam_manual_v2_2012_page_0462_chunk_0002"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-08": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 5514 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "12 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "5 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "5514 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1022_1022.43_chunk_0001",
+        "12CFR1022_1022.43_chunk_0002",
+        "12CFR1022_1022.43_chunk_0003",
+        "exam_manual_v2_2012_page_0637_chunk_0001",
+        "exam_manual_v2_2012_page_0638_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1022_1022.41_chunk_0001",
+        "12CFR1022_1022.43_chunk_0001",
+        "12CFR1022_1022.43_chunk_0002",
+        "12CFR1022_1022.43_chunk_0003",
+        "exam_manual_v2_2012_page_0056_chunk_0002",
+        "exam_manual_v2_2012_page_0632_chunk_0001",
+        "exam_manual_v2_2012_page_0634_chunk_0001",
+        "exam_manual_v2_2012_page_0636_chunk_0001",
+        "exam_manual_v2_2012_page_0637_chunk_0001",
+        "exam_manual_v2_2012_page_0638_chunk_0001",
+        "exam_manual_v2_2012_page_0664_chunk_0001",
+        "sh_issue23_2021-01_page_0017_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-09": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 3996 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "accepted_answer_preserved": {
+          "pass": true,
+          "detail": ""
+        }
+      },
+      "issues": []
+    },
+    "G3-10": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 5099 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "12 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "7 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "5099 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1022_1022.43_chunk_0001",
+        "12CFR1022_1022.43_chunk_0002",
+        "12CFR1022_1022.43_chunk_0003",
+        "exam_manual_v2_2012_page_0636_chunk_0001",
+        "exam_manual_v2_2012_page_0637_chunk_0001",
+        "exam_manual_v2_2012_page_0638_chunk_0001",
+        "exam_manual_v2_2012_page_0665_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1022_1022.42_chunk_0001",
+        "12CFR1022_1022.43_chunk_0001",
+        "12CFR1022_1022.43_chunk_0002",
+        "12CFR1022_1022.43_chunk_0003",
+        "exam_manual_v2_2012_page_0076_chunk_0001",
+        "exam_manual_v2_2012_page_0077_chunk_0001",
+        "exam_manual_v2_2012_page_0636_chunk_0001",
+        "exam_manual_v2_2012_page_0637_chunk_0001",
+        "exam_manual_v2_2012_page_0638_chunk_0001",
+        "exam_manual_v2_2012_page_0663_chunk_0001",
+        "exam_manual_v2_2012_page_0664_chunk_0001",
+        "exam_manual_v2_2012_page_0665_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-11": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 4755 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "14 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "4 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "4755 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1006_1006.100_chunk_0001",
+        "12CFR1006_1006.14_chunk_0001",
+        "12CFR1006_1006.14_chunk_0002",
+        "exam_manual_v2_2012_page_0668_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1006_1006.100_chunk_0001",
+        "12CFR1006_1006.14_chunk_0001",
+        "12CFR1006_1006.14_chunk_0002",
+        "12CFR1006_1006.22_chunk_0001",
+        "12CFR1006_1006.2_chunk_0003",
+        "12CFR1006_1006.6_chunk_0005",
+        "12CFR1022_1022.141_chunk_0001",
+        "exam_manual_v2_2012_page_0146_chunk_0001",
+        "exam_manual_v2_2012_page_0190_chunk_0001",
+        "exam_manual_v2_2012_page_0668_chunk_0001",
+        "exam_manual_v2_2012_page_0669_chunk_0001",
+        "exam_manual_v2_2012_page_0670_chunk_0001",
+        "exam_manual_v2_2012_page_0672_chunk_0001",
+        "exam_manual_v2_2012_page_0673_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-12": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 6421 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "13 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "5 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "6421 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1006_1006.22_chunk_0001",
+        "12CFR1006_1006.2_chunk_0001",
+        "12CFR1006_1006.6_chunk_0001",
+        "12CFR1006_1006.6_chunk_0002",
+        "exam_manual_v2_2012_page_0668_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1006_1006.10_chunk_0001",
+        "12CFR1006_1006.14_chunk_0001",
+        "12CFR1006_1006.22_chunk_0001",
+        "12CFR1006_1006.22_chunk_0002",
+        "12CFR1006_1006.2_chunk_0001",
+        "12CFR1006_1006.2_chunk_0003",
+        "12CFR1006_1006.6_chunk_0001",
+        "12CFR1006_1006.6_chunk_0002",
+        "exam_manual_v2_2012_page_0668_chunk_0001",
+        "exam_manual_v2_2012_page_0669_chunk_0001",
+        "exam_manual_v2_2012_page_0670_chunk_0001",
+        "exam_manual_v2_2012_page_0671_chunk_0001",
+        "exam_manual_v2_2012_page_0672_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-13": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 6657 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "13 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "6 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "6657 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "12CFR1006_1006.18_chunk_0002",
+        "12CFR1006_1006.34_chunk_0001",
+        "12CFR1006_1006.34_chunk_0002",
+        "12CFR1006_1006.34_chunk_0003",
+        "12CFR1006_1006.34_chunk_0004",
+        "12CFR1006_1006.42_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1006_1006.18_chunk_0002",
+        "12CFR1006_1006.34_chunk_0001",
+        "12CFR1006_1006.34_chunk_0002",
+        "12CFR1006_1006.34_chunk_0003",
+        "12CFR1006_1006.34_chunk_0004",
+        "12CFR1006_1006.34_chunk_0005",
+        "12CFR1006_1006.34_chunk_0006",
+        "12CFR1006_1006.34_chunk_0007",
+        "12CFR1006_1006.38_chunk_0001",
+        "12CFR1006_1006.42_chunk_0001",
+        "exam_manual_v2_2012_page_0599_chunk_0002",
+        "exam_manual_v2_2012_page_0669_chunk_0001",
+        "sh_issue17_2018-09_page_0007_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-14": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 5706 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "13 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "8 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "5706 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "exam_manual_v2_2012_page_0746_chunk_0001",
+        "exam_manual_v2_2012_page_0747_chunk_0001",
+        "exam_manual_v2_2012_page_0752_chunk_0001",
+        "exam_manual_v2_2012_page_0753_chunk_0001",
+        "exam_manual_v2_2012_page_0754_chunk_0001",
+        "exam_manual_v2_2012_page_0755_chunk_0001",
+        "exam_manual_v2_2012_page_0783_chunk_0001",
+        "exam_manual_v2_2012_page_0797_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "12CFR1026_1026.5_chunk_0003",
+        "exam_manual_v2_2012_page_0746_chunk_0001",
+        "exam_manual_v2_2012_page_0747_chunk_0001",
+        "exam_manual_v2_2012_page_0752_chunk_0001",
+        "exam_manual_v2_2012_page_0753_chunk_0001",
+        "exam_manual_v2_2012_page_0754_chunk_0001",
+        "exam_manual_v2_2012_page_0755_chunk_0001",
+        "exam_manual_v2_2012_page_0760_chunk_0001",
+        "exam_manual_v2_2012_page_0766_chunk_0001",
+        "exam_manual_v2_2012_page_0777_chunk_0001",
+        "exam_manual_v2_2012_page_0780_chunk_0001",
+        "exam_manual_v2_2012_page_0783_chunk_0001",
+        "exam_manual_v2_2012_page_0797_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-15": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 6425 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "14 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "6 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "6425 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "exam_manual_v2_2012_page_0755_chunk_0001",
+        "exam_manual_v2_2012_page_0756_chunk_0001",
+        "exam_manual_v2_2012_page_0764_chunk_0001",
+        "exam_manual_v2_2012_page_0765_chunk_0001",
+        "exam_manual_v2_2012_page_0766_chunk_0001",
+        "exam_manual_v2_2012_page_0789_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "exam_manual_v2_2012_page_0747_chunk_0001",
+        "exam_manual_v2_2012_page_0748_chunk_0001",
+        "exam_manual_v2_2012_page_0749_chunk_0001",
+        "exam_manual_v2_2012_page_0755_chunk_0001",
+        "exam_manual_v2_2012_page_0756_chunk_0001",
+        "exam_manual_v2_2012_page_0764_chunk_0001",
+        "exam_manual_v2_2012_page_0765_chunk_0001",
+        "exam_manual_v2_2012_page_0766_chunk_0001",
+        "exam_manual_v2_2012_page_0769_chunk_0001",
+        "exam_manual_v2_2012_page_0789_chunk_0001",
+        "exam_manual_v2_2012_page_0792_chunk_0001",
+        "exam_manual_v2_2012_page_0800_chunk_0001",
+        "exam_manual_v2_2012_page_0803_chunk_0001",
+        "exam_manual_v2_2012_page_0804_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-16": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 5954 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "16 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "6 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "5954 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "exam_manual_v2_2012_page_0755_chunk_0001",
+        "exam_manual_v2_2012_page_0756_chunk_0001",
+        "exam_manual_v2_2012_page_0764_chunk_0001",
+        "exam_manual_v2_2012_page_0765_chunk_0001",
+        "exam_manual_v2_2012_page_0789_chunk_0001",
+        "exam_manual_v2_2012_page_0804_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "exam_manual_v2_2012_page_0353_chunk_0002",
+        "exam_manual_v2_2012_page_0357_chunk_0002",
+        "exam_manual_v2_2012_page_0360_chunk_0001",
+        "exam_manual_v2_2012_page_0692_chunk_0002",
+        "exam_manual_v2_2012_page_0747_chunk_0001",
+        "exam_manual_v2_2012_page_0755_chunk_0001",
+        "exam_manual_v2_2012_page_0756_chunk_0001",
+        "exam_manual_v2_2012_page_0763_chunk_0001",
+        "exam_manual_v2_2012_page_0764_chunk_0001",
+        "exam_manual_v2_2012_page_0765_chunk_0001",
+        "exam_manual_v2_2012_page_0769_chunk_0001",
+        "exam_manual_v2_2012_page_0785_chunk_0001",
+        "exam_manual_v2_2012_page_0789_chunk_0001",
+        "exam_manual_v2_2012_page_0792_chunk_0001",
+        "exam_manual_v2_2012_page_0803_chunk_0001",
+        "exam_manual_v2_2012_page_0804_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    },
+    "G3-17": {
+      "checks": {
+        "answer_present": {
+          "pass": true,
+          "detail": "Answer length: 3875 characters"
+        },
+        "question_matches_baseline": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_pack_exists": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_present": {
+          "pass": true,
+          "detail": "16 unique evidence chunks"
+        },
+        "citations_present": {
+          "pass": true,
+          "detail": "3 unique citations"
+        },
+        "citations_in_evidence_pack": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_chunks_exist_in_index": {
+          "pass": true,
+          "detail": ""
+        },
+        "evidence_text_integrity": {
+          "pass": true,
+          "detail": "Altered: []; Empty: []"
+        },
+        "G3_17_supervisory_finding_evidence": {
+          "pass": true,
+          "detail": "sh_issue22_2020-09_page_0011_chunk_0001"
+        },
+        "G3_17_finding_cited": {
+          "pass": true,
+          "detail": "sh_issue22_2020-09_page_0011_chunk_0001"
+        },
+        "regulatory_reference_present": {
+          "pass": true,
+          "detail": ""
+        },
+        "answer_length_reasonable": {
+          "pass": true,
+          "detail": "3875 characters"
+        }
+      },
+      "cited_chunk_ids": [
+        "sh_issue18_2019-03_page_0003_chunk_0001",
+        "sh_issue22_2020-09_page_0003_chunk_0001",
+        "sh_issue22_2020-09_page_0011_chunk_0001"
+      ],
+      "evidence_chunk_ids": [
+        "exam_manual_v2_2012_page_0767_chunk_0001",
+        "exam_manual_v2_2012_page_0769_chunk_0001",
+        "exam_manual_v2_2012_page_0770_chunk_0001",
+        "exam_manual_v2_2012_page_0792_chunk_0001",
+        "exam_manual_v2_2012_page_0807_chunk_0001",
+        "exam_manual_v2_2012_page_0923_chunk_0001",
+        "sh_issue17_2018-09_page_0003_chunk_0001",
+        "sh_issue18_2019-03_page_0003_chunk_0001",
+        "sh_issue18_2019-03_page_0018_chunk_0001",
+        "sh_issue18_2019-03_page_0021_chunk_0001",
+        "sh_issue22_2020-09_page_0002_chunk_0001",
+        "sh_issue22_2020-09_page_0003_chunk_0001",
+        "sh_issue22_2020-09_page_0011_chunk_0001",
+        "sh_issue22_2020-09_page_0023_chunk_0001",
+        "sh_issue22_2020-09_page_0030_chunk_0001",
+        "sh_issue23_2021-01_page_0028_chunk_0001"
+      ],
+      "unsupported_citations": [],
+      "altered_evidence_chunks": [],
+      "issues": []
+    }
+  }
+}

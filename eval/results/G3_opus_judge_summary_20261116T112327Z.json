@@ -1,0 +1,31 @@
+{
+  "evaluation": "ComplaintIQ Phase 7 - G3 Independent Opus Evaluation",
+  "run_id": "20261116T112327Z",
+  "input_file": "/home/sagemaker-user/complaintiq/eval/results/G3_all_17_reviews_20261113T173933Z.csv",
+  "input_hash": "0cb1264a6d6a",
+  "judge_model": "us.anthropic.claude-opus-4-8",
+  "region": "us-east-1",
+  "total_questions": 17,
+  "completed": 17,
+  "pending": 0,
+  "failed_this_run": 0,
+  "recommendation_counts": {
+    "REVISE": 14,
+    "ACCEPT": 2,
+    "INSUFFICIENT_EVIDENCE": 1
+  },
+  "average_scores": {
+    "factual_correctness": 4.0,
+    "regulatory_accuracy": 3.94,
+    "evidence_grounding": 4.18,
+    "citation_quality": 3.65,
+    "completeness": 3.24
+  },
+  "human_reviews_preserved": 3,
+  "automated_reviews_preserved": 0,
+  "judge_output": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_evaluation_20261116T112327Z.csv",
+  "judge_details": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_details_20261116T112327Z.jsonl",
+  "progress_file": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_progress_0cb1264a6d6a.jsonl",
+  "errors_file": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_errors_20261116T112327Z.csv",
+  "backup_file": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_input_backup_20261116T112327Z.csv"
+}
