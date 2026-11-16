@@ -1,0 +1,11 @@
+{
+  "run_id": "run_20261116T170718Z",
+  "worker_model": "us.anthropic.claude-sonnet-4-6",
+  "cases_requested": 3,
+  "successful_cases": 3,
+  "error_cases": 0,
+  "product_accuracy": 1.0,
+  "sub_issue_accuracy": 0.0,
+  "derived_issue_accuracy": 0.0,
+  "mean_latency_seconds": 2.5713333333333335
+}

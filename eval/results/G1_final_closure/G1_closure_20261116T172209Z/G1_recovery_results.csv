@@ -1,0 +1,6 @@
+case_id,status,predicted_product,predicted_issue,predicted_severity,predicted_vulnerable_customer,confidence,latency_seconds,error
+22794522,RECOVERED,Credit card,Problem when making payments,HIGH,False,0.82,7.411260255998059,
+23678189,RECOVERED,Credit card,Fees or interest,HIGH,True,0.88,9.293668805999914,
+22804204,RECOVERED,Checking or savings account,Problem caused by your funds being low,CRITICAL,False,0.82,7.07652526700258,
+23204140,RECOVERED,Checking or savings account,Problem with a company's investigation into an existing problem,HIGH,False,0.72,9.074598070998036,
+23052497,RECOVERED,Checking or savings account,Problem with a company's investigation into an existing problem,CRITICAL,True,0.91,9.977359345997684,
