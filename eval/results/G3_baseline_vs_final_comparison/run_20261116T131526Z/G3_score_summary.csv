@@ -1,0 +1,6 @@
+dimension,baseline_mean,final_mean,mean_delta,questions_improved,questions_unchanged,questions_declined
+factual_correctness,4.0,5.0,1.0,15,2,0
+regulatory_accuracy,3.94,5.0,1.06,15,2,0
+evidence_grounding,4.18,4.82,0.65,10,5,2
+citation_quality,3.65,4.24,0.59,9,6,2
+completeness,3.24,4.82,1.59,16,1,0

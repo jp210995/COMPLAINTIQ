@@ -1,0 +1,90 @@
+{
+  "evaluation": "ComplaintIQ Phase 7 — Baseline vs Final Opus Comparison",
+  "run_id": "20261116T131526Z",
+  "baseline_file": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_evaluation_20261116T112452Z.csv",
+  "final_file": "/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_evaluation.csv",
+  "total_questions": 17,
+  "baseline_recommendations": {
+    "REVISE": 14,
+    "ACCEPT": 2,
+    "INSUFFICIENT_EVIDENCE": 1
+  },
+  "final_recommendations": {
+    "ACCEPT": 14,
+    "REVISE": 3
+  },
+  "recommendation_changes": 14,
+  "score_summary": [
+    {
+      "dimension": "factual_correctness",
+      "baseline_mean": 4.0,
+      "final_mean": 5.0,
+      "mean_delta": 1.0,
+      "questions_improved": 15,
+      "questions_unchanged": 2,
+      "questions_declined": 0
+    },
+    {
+      "dimension": "regulatory_accuracy",
+      "baseline_mean": 3.94,
+      "final_mean": 5.0,
+      "mean_delta": 1.06,
+      "questions_improved": 15,
+      "questions_unchanged": 2,
+      "questions_declined": 0
+    },
+    {
+      "dimension": "evidence_grounding",
+      "baseline_mean": 4.18,
+      "final_mean": 4.82,
+      "mean_delta": 0.65,
+      "questions_improved": 10,
+      "questions_unchanged": 5,
+      "questions_declined": 2
+    },
+    {
+      "dimension": "citation_quality",
+      "baseline_mean": 3.65,
+      "final_mean": 4.24,
+      "mean_delta": 0.59,
+      "questions_improved": 9,
+      "questions_unchanged": 6,
+      "questions_declined": 2
+    },
+    {
+      "dimension": "completeness",
+      "baseline_mean": 3.24,
+      "final_mean": 4.82,
+      "mean_delta": 1.59,
+      "questions_improved": 16,
+      "questions_unchanged": 1,
+      "questions_declined": 0
+    }
+  ],
+  "recommendation_summary": [
+    {
+      "recommendation": "ACCEPT",
+      "baseline_count": 2,
+      "final_count": 14,
+      "count_change": 12
+    },
+    {
+      "recommendation": "INSUFFICIENT_EVIDENCE",
+      "baseline_count": 1,
+      "final_count": 0,
+      "count_change": -1
+    },
+    {
+      "recommendation": "REVISE",
+      "baseline_count": 14,
+      "final_count": 3,
+      "count_change": -11
+    }
+  ],
+  "question_level_comparison": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_question_level_comparison.csv",
+  "score_summary_file": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_score_summary.csv",
+  "recommendation_summary_file": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_recommendation_summary.csv",
+  "recommendation_changes_file": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_recommendation_changes.csv",
+  "original_baseline_modified": false,
+  "final_evaluation_modified": false
+}

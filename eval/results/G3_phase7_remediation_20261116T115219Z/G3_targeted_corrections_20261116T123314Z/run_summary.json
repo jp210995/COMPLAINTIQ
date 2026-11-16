@@ -1,0 +1,41 @@
+{
+  "run_directory": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z",
+  "input_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_revised_candidates.csv",
+  "output_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_targeted_corrected_candidates.csv",
+  "evidence_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/correction_evidence.jsonl",
+  "target_questions": [
+    "G3-02",
+    "G3-05",
+    "G3-07",
+    "G3-12",
+    "G3-13",
+    "G3-14",
+    "G3-15"
+  ],
+  "successful_count": 7,
+  "errors_this_execution": 0,
+  "changed_questions": [
+    "G3-02",
+    "G3-05",
+    "G3-07",
+    "G3-12",
+    "G3-13",
+    "G3-14",
+    "G3-15"
+  ],
+  "unchanged_questions": [
+    "G3-01",
+    "G3-03",
+    "G3-04",
+    "G3-06",
+    "G3-08",
+    "G3-09",
+    "G3-10",
+    "G3-11",
+    "G3-16",
+    "G3-17"
+  ],
+  "unexpected_changes": [],
+  "worker_model": "us.anthropic.claude-sonnet-4-6",
+  "timestamp_utc": "2026-11-16T12:36:48.258417+00:00"
+}

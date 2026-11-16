@@ -1,0 +1,27 @@
+{
+  "overall_result": "STRUCTURAL_PASS",
+  "question_count": 17,
+  "full_index_chunk_count": 1784,
+  "target_evidence_chunk_count": 37,
+  "all_17_questions_present": true,
+  "duplicate_question_ids": false,
+  "all_citations_valid": true,
+  "all_answers_have_citations": true,
+  "changed_questions": [
+    "G3-02",
+    "G3-05",
+    "G3-12"
+  ],
+  "expected_targets": [
+    "G3-02",
+    "G3-05",
+    "G3-12"
+  ],
+  "missing_expected_changes": [],
+  "unexpected_changes": [],
+  "all_non_targets_unchanged": true,
+  "accepted_controls_preserved": true,
+  "previously_passing_controls_preserved": true,
+  "validation_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_structural_validation.csv",
+  "validation_json": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_structural_validation.json"
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-11-16T12:50:29.533843+00:00",
+  "review_directory": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_semantic_rereview_20261116T124944Z",
+  "judge_model": "us.anthropic.claude-opus-4-8",
+  "target_questions": [
+    "G3-02",
+    "G3-05",
+    "G3-12"
+  ],
+  "completed_count": 3,
+  "pass_count": 3,
+  "review_count": 0,
+  "errors": [],
+  "all_three_pass": true,
+  "semantic_review_json": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_semantic_rereview_20261116T124944Z/semantic_review.json",
+  "semantic_review_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_semantic_rereview_20261116T124944Z/semantic_review.csv"
+}

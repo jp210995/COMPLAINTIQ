@@ -1,0 +1,187 @@
+{
+  "report": "ComplaintIQ Phase 7 Final Evaluation and Remediation Report",
+  "generated_at_utc": "2026-11-16T13:23:10.155677+00:00",
+  "total_questions": 17,
+  "final_completed": 17,
+  "final_pending": 0,
+  "baseline_recommendations": {
+    "REVISE": 14,
+    "ACCEPT": 2,
+    "INSUFFICIENT_EVIDENCE": 1
+  },
+  "final_recommendations": {
+    "ACCEPT": 14,
+    "REVISE": 3
+  },
+  "recommendation_changes": 14,
+  "score_summary": [
+    {
+      "dimension": "factual_correctness",
+      "baseline_mean": 4.0,
+      "final_mean": 5.0,
+      "mean_delta": 1.0,
+      "questions_improved": 15,
+      "questions_unchanged": 2,
+      "questions_declined": 0
+    },
+    {
+      "dimension": "regulatory_accuracy",
+      "baseline_mean": 3.94,
+      "final_mean": 5.0,
+      "mean_delta": 1.06,
+      "questions_improved": 15,
+      "questions_unchanged": 2,
+      "questions_declined": 0
+    },
+    {
+      "dimension": "evidence_grounding",
+      "baseline_mean": 4.18,
+      "final_mean": 4.82,
+      "mean_delta": 0.65,
+      "questions_improved": 10,
+      "questions_unchanged": 5,
+      "questions_declined": 2
+    },
+    {
+      "dimension": "citation_quality",
+      "baseline_mean": 3.65,
+      "final_mean": 4.24,
+      "mean_delta": 0.59,
+      "questions_improved": 9,
+      "questions_unchanged": 6,
+      "questions_declined": 2
+    },
+    {
+      "dimension": "completeness",
+      "baseline_mean": 3.24,
+      "final_mean": 4.82,
+      "mean_delta": 1.59,
+      "questions_improved": 16,
+      "questions_unchanged": 1,
+      "questions_declined": 0
+    }
+  ],
+  "average_final_scores": {
+    "factual_correctness": 5.0,
+    "regulatory_accuracy": 5.0,
+    "evidence_grounding": 4.82,
+    "citation_quality": 4.24,
+    "completeness": 4.82
+  },
+  "remaining_review_findings": {
+    "G3-04": {
+      "recommendation": "REVISE",
+      "confidence": "HIGH",
+      "scores": {
+        "factual_correctness": 5,
+        "regulatory_accuracy": 5,
+        "evidence_grounding": 5,
+        "citation_quality": 4,
+        "completeness": 4
+      },
+      "overall_assessment": "The answer is accurate, well-grounded in the supplied regulatory and exam-manual evidence, and addresses the frequency requirement, content requirements, the four 1005.9 exceptions, and the payroll card and prepaid alternatives correctly. The principal defect is that the answer is truncated mid-sentence, leaving the prepaid exception discussion incomplete, and it omits the prepaid fee-disclosure provisions present in the evidence. These are completeness/presentation issues rather than factual errors, warranting a minor revision.",
+      "issues": [
+        "The answer is truncated at the end ('> **Exception'), leaving the prepaid-account exception discussion incomplete.",
+        "Exam-manual/checklist material and regulatory text are sometimes cited interchangeably for the same claim without distinguishing their authority."
+      ],
+      "missing_requirements": [
+        "The unverified prepaid account exception under 12 CFR 1005.18(c)(2) (no written history required for unverified non-payroll-card/non-government-benefit prepaid accounts) is present in supplied evidence (1005.18_chunk_0020) but the answer is cut off before completing it.",
+        "The prepaid fee-disclosure requirements (inclusion of all fees and summary totals under 1005.18(c)(4)-(5)), present in the supplied evidence, are not mentioned."
+      ],
+      "citation_findings": [
+        "[C:12CFR1005_1005.9_chunk_0002] correctly supports content items, account balance (beginning/close), exceptions, and the preauthorized/intra-institutional relationship rule.",
+        "[C:exam_manual_v2_2012_page_0703_chunk_0001] correctly supports the frequency rule and content list.",
+        "[C:exam_manual_v2_2012_page_0704_chunk_0001] correctly supports passbook, other preauthorized, intra-institutional and foreign-initiated exceptions.",
+        "[C:exam_manual_v2_2012_page_0705_chunk_0001] correctly supports the payroll card alternative details, modified disclosures, annual error notice, and liability-limit timing.",
+        "[C:12CFR1005_1005.18_chunk_0020] correctly supports the prepaid 12-month/24-month alternative.",
+        "References to 1005.10(a)(1)(iii) and Appendix A A-7/A-3 appear in supplied exam-manual text, so they are traceable."
+      ],
+      "evidence_limitations": [
+        "Gold notes were not supplied, so alignment with intended emphasis could not be fully confirmed.",
+        "The supplied evidence does not include the full text of the prepaid exception the answer began to discuss beyond 1005.18_chunk_0020, limiting verification of any content past the truncation point."
+      ],
+      "corrected_answer_available": true
+    },
+    "G3-06": {
+      "recommendation": "REVISE",
+      "confidence": "HIGH",
+      "scores": {
+        "factual_correctness": 5,
+        "regulatory_accuracy": 5,
+        "evidence_grounding": 5,
+        "citation_quality": 4,
+        "completeness": 5
+      },
+      "overall_assessment": "The answer accurately and completely states the consumer liability limits for unauthorized credit card use under 12 CFR 1026.12(b), including the $50 cap, definition of unauthorized use, conditions of liability, lesser-liability rule, and business-use exception. All material claims are grounded in supplied evidence, and the Regulation E comparison is correct and clearly distinguished. The only notable defect is the omission of the third statutory condition of liability (means to identify the cardholder) from the enumerated list, which is a minor incompleteness rather than a substantive error. This warrants a light revision for completeness.",
+      "issues": [
+        "The enumerated 'Conditions That Must Be Met' list states all conditions must be satisfied but omits the third statutory condition in 1026.12(b)(2)(iii): the card issuer must have provided a means to identify the cardholder on the account or authorized user of the card. This condition is present in the cited chunk but not listed.",
+        "The answer does not mention the notification mechanics (1026.12(b)(3)) in detail, though this is arguably beyond the core question on 'limits.'"
+      ],
+      "missing_requirements": [
+        "Third condition of cardholder liability under 1026.12(b)(2)(iii) — provision of a means to identify the cardholder/authorized user — omitted from the enumerated conditions list."
+      ],
+      "citation_findings": [
+        "[C:12CFR1026_1026.12_chunk_0001] correctly supports the liability cap, definition, and conditions of liability.",
+        "[C:12CFR1026_1026.12_chunk_0002] correctly supports the lesser-liability rule and business-use exception.",
+        "[C:12CFR1005_1005.6_chunk_0001] supports the EFT liability limits ($50/$500) referenced in the debit card note.",
+        "[C:exam_manual_v2_2012_page_0698_chunk_0001] supports the EFT liability chart including unlimited liability scenarios; correctly identified as exam-manual material.",
+        "No invented or untraceable citations detected."
+      ],
+      "evidence_limitations": [
+        "Gold notes and automated critic verdict not supplied, but the regulatory text supplied is sufficient to verify the answer.",
+        "The gold chunk set references additional sections (e.g., 1026.2 definitions, 1026.6 disclosures, 1026.54) not all present in retrieved evidence, but these are not material to the core liability-limit question."
+      ],
+      "corrected_answer_available": true
+    },
+    "G3-15": {
+      "recommendation": "REVISE",
+      "confidence": "HIGH",
+      "scores": {
+        "factual_correctness": 5,
+        "regulatory_accuracy": 5,
+        "evidence_grounding": 4,
+        "citation_quality": 4,
+        "completeness": 5
+      },
+      "overall_assessment": "The answer is substantively accurate, comprehensive, and well-grounded in the supplied evidence for the core 12 CFR 1030.7 interest-payment rules, including correct treatment of balance methods, prohibited methods, minimum balance consistency, compounding/crediting, and accrual timing. The primary deficiencies are citation-level: two cited chunk IDs are not in the supplied evidence, and one sub-lettered citation (1030.4(b)(2)(ii)) is not verbatim in evidence. These are minor and do not affect the factual or regulatory correctness of the substance, but the unverifiable citations warrant correction.",
+      "issues": [
+        "Cites chunk IDs (page_0784_chunk_0001, page_0798_chunk_0001) not present in the supplied evidence; these citations are unverifiable.",
+        "Uses the specific lettered citation '12 CFR 1030.4(b)(2)(ii)' for the early-closure forfeiture statement, which does not appear verbatim in the supplied evidence (chunk 0755 states the requirement without that sub-letter).",
+        "Minor over-precision in labeling staff commentary section numbers (e.g., 1030.7(b)-3) — these are supported by chunks 0789/0804, so acceptable, but the (a)(2)-1, -2, -4, -7 attributions rely on chunk 0765 which does support them."
+      ],
+      "missing_requirements": [],
+      "citation_findings": [
+        "Supported: 12 CFR 1030.7(a)(1) methods and prohibited methods — chunk 0764.",
+        "Supported: 12 CFR 1030.7(a)(2) minimum balance consistency and staff commentary -1,-2,-4,-7 — chunk 0765.",
+        "Supported: 12 CFR 1030.7(b) compounding/crediting and 7(b)-3 early closure — chunks 0765, 0789, 0804.",
+        "Supported: 12 CFR 1030.7(c) accrual start/end — chunks 0765, 0766, 0789, 0804.",
+        "Supported: Definition of interest and $10 bonus threshold — chunks 0749, 0748.",
+        "Supported: Disclosure requirements 1030.4(b)(1)-(3) including forfeiture statement — chunks 0755, 0756.",
+        "Unsupported/unverifiable: page_0784_chunk_0001 and page_0798_chunk_0001 not in supplied evidence.",
+        "Partially unsupported: the exact '1030.4(b)(2)(ii)' sub-citation not found verbatim in evidence."
+      ],
+      "evidence_limitations": [
+        "Gold notes not supplied; automated critic verdict not supplied.",
+        "Two cited chunks (0784, 0798) are not in the supplied evidence set, so their specific support cannot be confirmed."
+      ],
+      "corrected_answer_available": true
+    }
+  },
+  "preserved_controls": {
+    "G3-06": {
+      "final_recommendation": "REVISE",
+      "preserved_during_remediation": true
+    },
+    "G3-09": {
+      "final_recommendation": "ACCEPT",
+      "preserved_during_remediation": true
+    }
+  },
+  "structural_validation_source": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_structural_validation_v2.json",
+  "semantic_review_source": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_semantic_rereview_20261116T124146Z/semantic_review.json",
+  "original_human_scores_preserved": true,
+  "original_baseline_modified": false,
+  "final_candidates_modified": false,
+  "report_markdown": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/ComplaintIQ_Phase7_Final_Report.md",
+  "reconstructed_final_summary": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/G3_reconstructed_final_opus_summary.json"
+}

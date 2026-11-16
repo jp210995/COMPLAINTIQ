@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-11-16T12:38:20.410281+00:00",
+  "candidate_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_targeted_corrected_candidates.csv",
+  "evidence_file": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/correction_evidence.jsonl",
+  "index_file": "/home/sagemaker-user/complaintiq/index/reg_chunks.jsonl",
+  "question_count": 17,
+  "target_questions": [
+    "G3-02",
+    "G3-05",
+    "G3-07",
+    "G3-12",
+    "G3-13",
+    "G3-14",
+    "G3-15"
+  ],
+  "target_changes": [
+    "G3-02",
+    "G3-05",
+    "G3-07",
+    "G3-12",
+    "G3-13",
+    "G3-14",
+    "G3-15"
+  ],
+  "unexpected_changes": [],
+  "missing_questions": [],
+  "unexpected_questions": [],
+  "global_checks": {
+    "exactly_17_questions": true,
+    "no_missing_questions": true,
+    "no_unexpected_questions": true,
+    "all_7_targets_changed": true,
+    "no_unexpected_changes": true,
+    "both_accepted_controls_preserved": true
+  },
+  "question_status_counts": {
+    "STRUCTURAL_REVIEW": 11,
+    "STRUCTURAL_PASS": 6
+  },
+  "all_question_checks_pass": false,
+  "global_checks_pass": true,
+  "overall_result": "STRUCTURAL_REVIEW",
+  "validation_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_structural_validation.csv"
+}

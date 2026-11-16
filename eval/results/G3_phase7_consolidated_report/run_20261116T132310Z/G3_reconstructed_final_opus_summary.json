@@ -1,0 +1,112 @@
+{
+  "evaluation": "G3 final independent Opus evaluation",
+  "model": "us.anthropic.claude-opus-4-8",
+  "region": "us-east-1",
+  "total_questions": 17,
+  "completed": 17,
+  "pending": 0,
+  "failed": 0,
+  "recommendation_counts": {
+    "ACCEPT": 14,
+    "REVISE": 3,
+    "REJECT": 0,
+    "INSUFFICIENT_EVIDENCE": 0
+  },
+  "average_scores": {
+    "factual_correctness": 5.0,
+    "regulatory_accuracy": 5.0,
+    "evidence_grounding": 4.82,
+    "citation_quality": 4.24,
+    "completeness": 4.82
+  },
+  "question_level_results": [
+    {
+      "question_id": "G3-01",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-02",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-03",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-04",
+      "recommendation": "REVISE",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-05",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-06",
+      "recommendation": "REVISE",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-07",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-08",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-09",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-10",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-11",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-12",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-13",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-14",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-15",
+      "recommendation": "REVISE",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-16",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    },
+    {
+      "question_id": "G3-17",
+      "recommendation": "ACCEPT",
+      "status": "LLM_JUDGE_REVIEWED"
+    }
+  ],
+  "source_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_evaluation.csv",
+  "source_details_jsonl": "/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_details.jsonl",
+  "reconstructed": true
+}

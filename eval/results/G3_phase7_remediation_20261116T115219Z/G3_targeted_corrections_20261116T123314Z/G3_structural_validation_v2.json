@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-11-16T12:40:41.643988+00:00",
+  "overall_result": "STRUCTURAL_PASS",
+  "global_checks": {
+    "exactly_17_questions": true,
+    "all_7_targets_changed": true,
+    "no_unexpected_changes": true,
+    "G3_06_and_G3_09_preserved": true,
+    "all_questions_structurally_pass": true
+  },
+  "target_changes": [
+    "G3-02",
+    "G3-05",
+    "G3-07",
+    "G3-12",
+    "G3-13",
+    "G3-14",
+    "G3-15"
+  ],
+  "unexpected_changes": [],
+  "status_counts": {
+    "STRUCTURAL_PASS": 17
+  },
+  "validation_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_structural_validation_v2.csv",
+  "validation_json": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_structural_validation_v2.json"
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "question_id": "G3-02",
+    "verdict": "PASS",
+    "scores": {
+      "factual_accuracy": 5,
+      "regulatory_accuracy": 5,
+      "evidence_support": 5,
+      "citation_quality": 4,
+      "completeness": 5
+    },
+    "resolved_findings": [
+      {
+        "prior_issue": "Distinguish regulatory text, official staff commentary, and exam manual/checklist material; do not mislabel exam checklist as staff commentary",
+        "status": "RESOLVED",
+        "explanation": "The answer consistently labels material as '12 CFR 1005.6' (regulation), 'CFPB examination checklist guidance' (checklist, pages 0727/0728), and 'CFPB examination guidance' (narrative manual, pages 0698/0699). It does not call exam checklist material 'staff commentary.' The attributions align with the chunk sources (e.g., page 0727/0728 are checklist pages; page 0698 is the narrative chart)."
+      },
+      {
+        "prior_issue": "Include late-reporting access-device scenario: $500 (b)(1)/(b)(2) cap still applies to within-60-day transfers, unlimited liability for post-60-day transfers subject to conditions",
+        "status": "RESOLVED",
+        "explanation": "Tier 3 section and the summary table both expressly address this: for transfers within the 60-day period, liability is capped at the lesser of $500 per the (b)(2) calculation; for transfers after the 60-day period, unlimited liability until notice, subject to the institution's burden of proof. This matches page 0698 chunk text and §1005.6(b)(3)'s cross-reference to (b)(1)/(b)(2)."
+      },
+      {
+        "prior_issue": "Do not present exam-manual chart 'no liability' shorthand as exact regulatory wording; preserve distinction between regulation and exam material",
+        "status": "RESOLVED",
+        "explanation": "The answer explicitly adds a note stating the 'no liability' characterization reflects CFPB examination guidance summarizing the practical outcome, while the text of §1005.6(b)(3) frames the rule in terms of liability for transfers occurring after the 60-day period. The 'no liability' table rows are attributed to CFPB examination guidance (pages 0698/0728), not to the regulation."
+      }
+    ],
+    "new_issues": [
+      {
+        "issue": "The $50/$500 reduced-liability-by-agreement citation points to page 0698 but the regulatory basis is §1005.6(b)(6); the answer cites only the exam chunk. This is a minor attribution matter, not a factual error.",
+        "severity": "LOW",
+        "evidence": "Page 0698 chunk states 'The financial institution may impose less consumer liability than is provided by 12 CFR 1005.6 based on state law or the deposit agreement (12 CFR 1005.6(b)(6)).' The answer's claim is fully supported; only the specific regulatory subsection cite is omitted."
+      },
+      {
+        "issue": "The disclosure threshold description attributes 'summary of consumer liability, telephone number/address, business days' to §1005.6(a)/§1005.7(b)(1)-(3); §1005.7(b) content items are supported by chunk 12CFR1005_1005.7_chunk_0001, consistent with the narrative. No material inaccuracy.",
+        "severity": "LOW",
+        "evidence": "§1005.6(a) requires disclosures under §1005.7(b)(1),(2),(3); chunk 1005.7 confirms those are liability summary, telephone/address, and business days. Supported."
+      }
+    ],
+    "rationale": "All three prior material findings are resolved. The tiered structure (Tier 1 $50, Tier 2 $500, Tier 3 60-day rule) is accurately stated per §1005.6(b) and the exam chunks. The late-reporting access-device scenario with within/after-60-day distinction is correctly handled, and the 'no liability' shorthand is properly flagged as exam-guidance characterization distinct from the regulatory text. Source labeling (regulation vs. checklist vs. narrative manual) is accurate and does not mislabel checklist material as staff commentary. The §1005.14 four-day/90-day service-provider rule and extenuating-circumstances/notice provisions are supported by the chunks. Only minor citation-granularity issues remain, which are not material."
+  },
+  {
+    "question_id": "G3-05",
+    "verdict": "PASS",
+    "scores": {
+      "factual_accuracy": 5,
+      "regulatory_accuracy": 5,
+      "evidence_support": 5,
+      "citation_quality": 5,
+      "completeness": 5
+    },
+    "resolved_findings": [
+      {
+        "prior_issue": "Explain §1026.13(i) relationship with Reg E accurately: identify triggers and explain substantive Reg E error-resolution only to extent supported",
+        "status": "RESOLVED",
+        "explanation": "Section V correctly identifies the two triggers (overdraft/minimum-balance lines and hybrid prepaid-credit cards) verbatim from chunk_0004, and the substantive Reg E procedures (error definition, notice of error, 10-day/45-day timelines, extensions, provisional credit exceptions) are supported by exam_manual_v2_2012_page_0700_chunk_0001 and 12CFR1005_1005.11_chunk_0002. No overreach beyond the evidence."
+      },
+      {
+        "prior_issue": "Only paragraphs (a),(b),(c),(e),(f),(h) are displaced; do not state (d) or (g) displaced",
+        "status": "RESOLVED",
+        "explanation": "Section V.A correctly states paragraphs (a), (b), (c), (e), (f), and (h) are displaced and explicitly notes '[t]he regulation does not state that paragraphs (d) and (g) of § 1026.13 are displaced.' This matches chunk_0004's enumeration exactly."
+      },
+      {
+        "prior_issue": "Tighten the description of the reassertion rule under §1026.13(h) and §1026.13(g)(4)",
+        "status": "RESOLVED",
+        "explanation": "Section IV states a creditor that has fully complied has no further responsibilities under the section 'other than as provided in § 1026.13(g)(4)' if a consumer reasserts substantially the same billing error. This tracks chunk_0004 accurately, and the parenthetical explanation of (g)(4) is consistent with the (g)(4) text in chunk_0003."
+      },
+      {
+        "prior_issue": "Do not present 'limited to these two situations' as regulatory text unless explicitly supported",
+        "status": "RESOLVED",
+        "explanation": "The answer refers to the Reg E displacement applying 'in the following two circumstances,' which accurately reflects the two enumerated paragraphs (i)(1) and (i)(2) in chunk_0004, rather than mislabeling any exclusivity phrase as regulatory text."
+      }
+    ],
+    "new_issues": [
+      {
+        "issue": "Section III.A cites chunk_0001 for the 30-day acknowledgment and 2-cycle/90-day resolution deadlines but the answer attributes these to §1026.13(c); the citation is correct though it omits that the resolution procedures referenced are (e) and (f).",
+        "severity": "LOW",
+        "evidence": "chunk_0001 states the creditor must comply 'with the appropriate resolution procedures of paragraphs (e) and (f)' within 30 days or within 2 cycles/90 days. The answer's phrasing 'appropriate resolution procedures' is accurate though generalized; no material error."
+      }
+    ],
+    "rationale": "All four prior findings are resolved. The definition of billing error, proper notice requirements, pending-resolution rules, resolution procedures, post-resolution duties, reassertion rule, and the Reg E relationship are each accurately stated and well supported by the supplied regulatory text and exam-manual chunks. Source attribution distinguishes regulatory text (1026.13, 1005.11) from exam-manual material. Only a trivial generalization issue remains, which is not material."
+  },
+  {
+    "question_id": "G3-12",
+    "verdict": "PASS",
+    "scores": {
+      "factual_accuracy": 5,
+      "regulatory_accuracy": 5,
+      "evidence_support": 5,
+      "citation_quality": 4,
+      "completeness": 5
+    },
+    "resolved_findings": [
+      {
+        "prior_issue": "Correct the 8 a.m./9 p.m. telephone presumption discussion using 'knowledge of circumstances to the contrary'",
+        "status": "RESOLVED",
+        "explanation": "The answer now states the regulatory standard verbatim: 'In the absence of the debt collector's knowledge of circumstances to the contrary, times before 8:00 a.m. and after 9:00 p.m. local time at the consumer's location are inconvenient.' This matches 12CFR1006_1006.6_chunk_0001 exactly. It does not use the prior incorrect 'actual knowledge that a different time is not inconvenient' formulation."
+      },
+      {
+        "prior_issue": "Do not attribute a commentary-sourced specific-facts-and-circumstances rebuttal formulation to the regulation",
+        "status": "RESOLVED",
+        "explanation": "The answer does not contain any specific-facts-and-circumstances rebuttal formulation. It correctly frames the 8 a.m./9 p.m. as a presumption subject to 'knowledge of circumstances to the contrary' per the regulatory text, with no improper source attribution."
+      },
+      {
+        "prior_issue": "Preserve the seven-call limit and the location-information rules",
+        "status": "RESOLVED",
+        "explanation": "Section 4 accurately presents the seven-calls-in-seven-days limit and the seven-days-after-conversation rule as presumptions of compliance/violation per 12CFR1006_1006.14_chunk_0001. Section 10 accurately presents the location-information form/content, once-per-third-party frequency, and § 1006.14(b)(1) cross-reference per 12CFR1006_1006.10_chunk_0001."
+      }
+    ],
+    "new_issues": [
+      {
+        "issue": "Media restrictions (postcard, envelope, employer email, social media) are cited to 12CFR1006_1006.22_chunk_0001; the chunk supports all four points, but the answer places them in a section on communication 'how/media' that is broadly accurate.",
+        "severity": "LOW",
+        "evidence": "12CFR1006_1006.22_chunk_0001 paragraph (f) supports postcard, envelope, employer email, and social media restrictions. The claims are supported."
+      },
+      {
+        "issue": "The 'consumer' definition for § 1006.6 is cited to 1006.6_chunk_0001 and 1006.2_chunk_0001; the confirmed-successor-in-interest item is supported by 1006.6_chunk_0001. Minor: the definition list is accurate and well supported.",
+        "severity": "LOW",
+        "evidence": "12CFR1006_1006.6_chunk_0001 lists spouse, parent (if minor), legal guardian, executor/administrator, and confirmed successor in interest. Fully supported."
+      }
+    ],
+    "rationale": "All three prior material findings are resolved. The 8 a.m./9 p.m. presumption now uses the exact regulatory 'knowledge of circumstances to the contrary' standard; no improper commentary-sourced rebuttal formulation is attributed to the regulation; and the seven-call limit and location-information rules are preserved and accurately stated. The answer's substantive claims across time/place restrictions, attorney representation, cease-communication rules, third-party rules, frequency presumptions, media restrictions, and location information are all well supported by the supplied evidence with appropriate citations. The exam-manual 'official when received' note is correctly attributed to the manual. No material inaccuracies were found."
+  }
+]
