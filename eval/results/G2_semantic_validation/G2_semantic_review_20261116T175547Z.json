@@ -1,0 +1,47 @@
+[
+  {
+    "question_id": "G2-04",
+    "generated_status": "SUCCESS",
+    "expected_rows": 2,
+    "generated_rows": 2,
+    "strict_match": false,
+    "semantic_match_candidate": false,
+    "review_note": "Review monetary-relief filter. Compare generated SQL predicate with the reference SQL and expected definition."
+  },
+  {
+    "question_id": "G2-05",
+    "generated_status": "SUCCESS",
+    "expected_rows": 3,
+    "generated_rows": 1,
+    "strict_match": false,
+    "semantic_match_candidate": true,
+    "review_note": "Generated top result compared with first expected ranked row. Check that both use the same increase calculation."
+  },
+  {
+    "question_id": "G2-13",
+    "generated_status": "SUCCESS",
+    "expected_rows": 4,
+    "generated_rows": 2,
+    "strict_match": false,
+    "semantic_match_candidate": false,
+    "review_note": "Wide-to-long transformation displayed. Verify quarter labels, product names and counts before marking equivalent."
+  },
+  {
+    "question_id": "G2-15",
+    "generated_status": "SUCCESS",
+    "expected_rows": 30,
+    "generated_rows": 59,
+    "strict_match": false,
+    "semantic_match_candidate": false,
+    "review_note": "Daily aggregate displayed. Verify date-by-date counts against expected output."
+  },
+  {
+    "question_id": "G2-18",
+    "generated_status": "SUCCESS",
+    "expected_rows": 6,
+    "generated_rows": 6,
+    "strict_match": false,
+    "semantic_match_candidate": false,
+    "review_note": "Review monetary-relief filter. Compare generated SQL predicate with the reference SQL and expected definition."
+  }
+]

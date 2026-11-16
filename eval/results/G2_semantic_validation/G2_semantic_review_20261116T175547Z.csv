@@ -1,0 +1,6 @@
+question_id,generated_status,expected_rows,generated_rows,strict_match,semantic_match_candidate,review_note
+G2-04,SUCCESS,2,2,False,False,Review monetary-relief filter. Compare generated SQL predicate with the reference SQL and expected definition.
+G2-05,SUCCESS,3,1,False,True,Generated top result compared with first expected ranked row. Check that both use the same increase calculation.
+G2-13,SUCCESS,4,2,False,False,"Wide-to-long transformation displayed. Verify quarter labels, product names and counts before marking equivalent."
+G2-15,SUCCESS,30,59,False,False,Daily aggregate displayed. Verify date-by-date counts against expected output.
+G2-18,SUCCESS,6,6,False,False,Review monetary-relief filter. Compare generated SQL predicate with the reference SQL and expected definition.

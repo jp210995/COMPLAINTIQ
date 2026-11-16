@@ -1,0 +1,6 @@
+question_id,test,status,matches_expected
+G2-04,monetary_relief_filter,MATCH,True
+G2-18,monetary_relief_filter,MATCH,True
+G2-05,top_ranked_result,MATCH,True
+G2-13,wide_to_long,MATCH,True
+G2-15,daily_aggregate,MATCH,True

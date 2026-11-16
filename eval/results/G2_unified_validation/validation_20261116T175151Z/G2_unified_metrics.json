@@ -1,0 +1,15 @@
+{
+  "evaluation": "G2 Analytics Unified Validation",
+  "source_run": "run_20261116T174203Z",
+  "total_answerable_questions": 18,
+  "reference_sql_success": 18,
+  "reference_matches_gold": 18,
+  "reference_gold_validation_rate": 1.0,
+  "generated_sql_success": 18,
+  "generated_matches_gold": 13,
+  "generated_gold_match_rate": 0.7222,
+  "generated_matches_reference": 13,
+  "generated_reference_match_rate": 0.7222,
+  "unanswerable_questions": 2,
+  "unanswerable_refusal_status": "PENDING_SEPARATE_EVALUATION"
+}

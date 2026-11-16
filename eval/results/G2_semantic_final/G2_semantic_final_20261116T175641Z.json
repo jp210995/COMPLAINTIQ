@@ -1,0 +1,32 @@
+[
+  {
+    "question_id": "G2-04",
+    "test": "monetary_relief_filter",
+    "status": "MATCH",
+    "matches_expected": true
+  },
+  {
+    "question_id": "G2-18",
+    "test": "monetary_relief_filter",
+    "status": "MATCH",
+    "matches_expected": true
+  },
+  {
+    "question_id": "G2-05",
+    "test": "top_ranked_result",
+    "status": "MATCH",
+    "matches_expected": true
+  },
+  {
+    "question_id": "G2-13",
+    "test": "wide_to_long",
+    "status": "MATCH",
+    "matches_expected": true
+  },
+  {
+    "question_id": "G2-15",
+    "test": "daily_aggregate",
+    "status": "MATCH",
+    "matches_expected": true
+  }
+]

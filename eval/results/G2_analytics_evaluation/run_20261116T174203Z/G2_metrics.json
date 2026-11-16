@@ -1,0 +1,13 @@
+{
+  "evaluation": "G2 Analytics",
+  "run_id": "run_20261116T174203Z",
+  "total_answerable_questions": 18,
+  "successful_executions": 18,
+  "failed_executions": 0,
+  "execution_coverage": 1.0,
+  "execution_accuracy_on_successful": 0.3889,
+  "end_to_end_execution_accuracy": 0.3889,
+  "mean_latency_seconds": 3.214,
+  "p50_latency_seconds": 2.937,
+  "p95_latency_seconds": 4.331
+}
