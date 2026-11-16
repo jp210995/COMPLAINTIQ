@@ -1,0 +1,10 @@
+{
+  "run_id": "run_20261116T160829Z",
+  "gold_file": "/home/sagemaker-user/complaintiq/eval/gold/G1_triage_gold.jsonl",
+  "total_records": 60,
+  "successful_records": 0,
+  "failed_records": 60,
+  "evaluation_status": "PARTIAL",
+  "worker_model": "Configured worker from models.json",
+  "metrics": {}
+}

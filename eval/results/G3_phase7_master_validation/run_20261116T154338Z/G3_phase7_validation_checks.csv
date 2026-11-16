@@ -1,0 +1,71 @@
+check,status,details
+Project root exists,PASS,/home/sagemaker-user/complaintiq
+Evaluation results directory exists,PASS,/home/sagemaker-user/complaintiq/eval/results
+Python version,PASS,3.12.15
+Pandas available,PASS,2.3.3
+Artifact exists: Original baseline CSV,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_evaluation_20261116T112452Z.csv
+Artifact exists: Final Opus evaluation CSV,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_evaluation.csv
+Artifact exists: Final Opus details JSONL,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_details.jsonl
+Artifact exists: Final candidates CSV,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_candidates.csv
+Artifact exists: Comparison JSON,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_baseline_vs_final_summary.json
+Artifact exists: Comparison CSV,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_question_level_comparison.csv
+Artifact exists: Structural validation JSON,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_structural_validation_v2.json
+Artifact exists: Semantic review JSON,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_semantic_rereview_20261116T124146Z/semantic_review.json
+Artifact exists: Consolidated Markdown report,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/ComplaintIQ_Phase7_Final_Report.md
+Artifact exists: Consolidated JSON report,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/ComplaintIQ_Phase7_Final_Report.json
+Artifact exists: Reconstructed Opus summary,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/G3_reconstructed_final_opus_summary.json
+Artifact exists: Remaining review findings CSV,PASS,/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/G3_remaining_review_findings.csv
+All Phase 7 source files loaded,PASS,"CSV, JSON and JSONL"
+Baseline: 17 unique G3 IDs,PASS,"Rows=17, unique IDs=17"
+Final evaluation: 17 unique G3 IDs,PASS,"Rows=17, unique IDs=17"
+Final candidates: 17 unique G3 IDs,PASS,"Rows=17, unique IDs=17"
+Comparison: 17 unique G3 IDs,PASS,"Rows=17, unique IDs=17"
+Final details contain all 17 questions,PASS,Records=17
+Final CSV contains llm_judge_status,PASS,
+Final CSV contains judge_recommendation,PASS,
+All 17 evaluations completed,PASS,17/17
+Zero pending evaluations,PASS,0
+Baseline recommendation distribution,PASS,"{'ACCEPT': 2, 'REVISE': 14, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 1}"
+Final recommendation distribution,PASS,"{'ACCEPT': 14, 'REVISE': 3, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 0}"
+Final recommendations match comparison JSON,PASS,"{'ACCEPT': 14, 'REVISE': 3, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 0}"
+Final recommendations match reconstructed summary,PASS,"{'ACCEPT': 14, 'REVISE': 3, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 0}"
+Human score preserved: factual_correctness_1_to_5,PASS,Candidate input versus final Opus output
+Human score preserved: regulatory_accuracy_1_to_5,PASS,Candidate input versus final Opus output
+Human score preserved: evidence_grounding_1_to_5,PASS,Candidate input versus final Opus output
+Human score preserved: citation_quality_1_to_5,PASS,Candidate input versus final Opus output
+Human score preserved: completeness_1_to_5,PASS,Candidate input versus final Opus output
+Final judge scores within 1–5,PASS,Validated score values=85; errors=0
+Five score dimensions present,PASS,"{'completeness', 'citation_quality', 'evidence_grounding', 'regulatory_accuracy', 'factual_correctness'}"
+Score dimension available: factual,PASS,
+Score dimension available: regulatory,PASS,
+Score dimension available: evidence,PASS,
+Score dimension available: citation,PASS,
+Score dimension available: completeness,PASS,
+Comparison score calculations valid,PASS,Means within 1–5 and deltas reconciled
+Structural validation overall result,PASS,STRUCTURAL_PASS
+Structural global check: exactly_17_questions,PASS,True
+Structural global check: all_7_targets_changed,PASS,True
+Structural global check: no_unexpected_changes,PASS,True
+Structural global check: G3_06_and_G3_09_preserved,PASS,True
+Structural global check: all_questions_structurally_pass,PASS,True
+Structural validation contains all 17 questions,PASS,"Rows=17, unique IDs=17"
+All 17 questions have STRUCTURAL_PASS,PASS,17/17
+No structural issues reported,PASS,Issues=0
+All seven targeted corrections recorded,PASS,Targets=7/7
+No unexpected answer changes,PASS,[]
+Structural status count equals 17,PASS,{'STRUCTURAL_PASS': 17}
+Semantic review references seven targeted questions,PASS,Found=7/7
+Semantic review artifact parsed,PASS,Explicit question verdicts extracted=7
+Three remaining REVISE questions,PASS,"['G3-04', 'G3-06', 'G3-15']"
+Remaining findings CSV contains three questions,PASS,Rows=3
+G3-17 recommendation transition,PASS,INSUFFICIENT_EVIDENCE -> ACCEPT
+G3-06 recommendation transition,PASS,ACCEPT -> REVISE
+G3-06: present in all three datasets,PASS,
+G3-09: present in all three datasets,PASS,
+Markdown report is non-empty,PASS,Characters=15296
+JSON report is valid,PASS,
+Reconstructed summary is valid,PASS,
+Report mentions 17 completed evaluations,PASS,
+Report mentions 14 ACCEPT and 3 REVISE,PASS,
+Report mentions remaining review questions,PASS,
+Artifact SHA256 manifest generated,PASS,Files hashed=12
