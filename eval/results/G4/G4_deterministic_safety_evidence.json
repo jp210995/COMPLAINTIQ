@@ -1,0 +1,25 @@
+{
+  "phase": "G4",
+  "evaluation_type": "Offline deterministic safety validation",
+  "timestamp_utc": "2026-11-20T06:20:25.298495+00:00",
+  "scenario_count": 10,
+  "prompt_injection_scenarios": 2,
+  "vulnerable_customer_scenarios": 2,
+  "guard_validation": {
+    "cases_tested": 10,
+    "injection_checks_passed": 10,
+    "injection_checks_failed": 0,
+    "pii_redaction_checks": "PASS",
+    "request_length_checks": "PASS",
+    "synthetic_pii_test_checks_passed": 8,
+    "synthetic_pii_test_checks_total": 8
+  },
+  "limitations": [
+    "No Bedrock inference was performed.",
+    "No ComplaintIQ end-to-end graph execution was performed.",
+    "Triage accuracy and final response quality were not evaluated.",
+    "Human rubric scores remain pending.",
+    "Deterministic guard success does not establish full prompt-injection resistance."
+  ],
+  "overall_status": "PARTIAL_G4_OFFLINE_SAFETY_VALIDATION"
+}

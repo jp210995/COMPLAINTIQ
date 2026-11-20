@@ -1,0 +1,10 @@
+{
+  "numeric_metric_records": 11,
+  "failure_analysis_files": 5,
+  "failure_analysis_rows": 92,
+  "numeric_cost_records": 0,
+  "baseline_ablation_results_found": 0,
+  "bedrock_calls": 0,
+  "agent_execution": false,
+  "status": "OFFLINE_METRIC_EXTRACTION_COMPLETE"
+}

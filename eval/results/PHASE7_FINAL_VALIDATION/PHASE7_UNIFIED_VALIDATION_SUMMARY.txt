@@ -1,0 +1,34 @@
+COMPLAINTIQ — PHASE 7 UNIFIED VALIDATION
+===========================================================================
+Generated UTC: 2026-11-20T06:26:44.788828+00:00
+Files inspected: 204
+Bedrock calls: 0
+Agent execution: False
+
+G1–G4 STATUS
+G1: {"metrics_files_found": 1, "valid_metrics_files": 1, "known_issue": "Manual annotation coverage was previously reported as 0/60; severity and vulnerability metrics must not be claimed."}
+G2: {"artifact_files_found": 10, "readable_json_or_csv": 10, "known_issue": "Strict result-set equality was previously 13/18; 5 additional results were manually accepted as semantic equivalents. Unanswerable refusal evidence requires separate confirmation."}
+G3: {"final_evaluation_files": 2, "manual_review_files": 4, "opus_evaluation_files": 7, "known_issue": "17 answerable responses received Opus proxy reviews, 3 abstentions were textually reviewed, and G3-04 citation markers remain a documented carryover. Opus proxy review is not human review."}
+G4: {"consolidated_evidence_exists": true, "worksheet_exists": true, "evidence_status": "PARTIAL_G4_OFFLINE_SAFETY_VALIDATION", "known_issue": "Deterministic safety validation completed. End-to-end execution and human rubric evaluation remain outstanding."}
+
+BASELINE DISCOVERY
+B0: 0 matching files
+B1: 1 matching files
+B2: 0 matching files
+
+ABLATION DISCOVERY
+A1: 0 matching files
+A2: 0 matching files
+
+JUDGE CALIBRATION
+{
+  "candidate_files": 0,
+  "ten_human_labels_verified": false,
+  "ten_opus_comparisons_verified": false,
+  "cohens_kappa_verified": false,
+  "reason": "File discovery alone cannot establish that 10 independent human faithfulness labels were compared with Opus judgments."
+}
+
+FINAL STATUS: PHASE7_OFFLINE_VALIDATION_COMPLETE_WITH_GAPS
+No missing results were fabricated.
+No Bedrock inference was performed.

@@ -1,0 +1,27 @@
+COMPLAINTIQ — PHASE G4 EVALUATION SUMMARY
+=================================================================
+Generated UTC: 2026-11-20T06:21:43.025419+00:00
+
+SCENARIO COMPOSITION
+Total scenarios: 10
+Prompt-injection scenarios: 2
+Vulnerable-customer scenarios: 2
+
+DETERMINISTIC SAFETY VALIDATION
+Prompt-injection checks: 10/10
+PII checks: 6/6
+Request-length checks: 2/2
+Overall safety result: PASS
+
+OUTSTANDING EVALUATION
+- Triage evaluation: NOT EXECUTED
+- End-to-end evaluation: NOT EXECUTED
+- Human rubric scoring: PENDING
+- Vulnerability handling review: PENDING
+
+LIMITATIONS
+- No Bedrock inference was performed.
+- No ComplaintIQ graph execution was performed.
+- Guard tests do not prove full end-to-end safety.
+
+FINAL G4 STATUS: PARTIAL_G4_OFFLINE_SAFETY_VALIDATION

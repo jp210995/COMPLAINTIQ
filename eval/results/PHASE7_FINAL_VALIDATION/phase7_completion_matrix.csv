@@ -1,0 +1,12 @@
+requirement,evidence,status,reason
+G1 — Classification evaluation,G1 closure metrics and prediction artifacts,PARTIAL,Manual severity/vulnerability annotation coverage is incomplete.
+G2 — SQL analytics evaluation,G2 query results and metrics,PARTIAL,Strict equality and semantic equivalence must remain separately reported; refusal evidence needs confirmation.
+G3 — Retrieval and answer evaluation,"G3 retrieval, citation, Opus and abstention artifacts",PARTIAL,Human review is not fully established; G3-04 citation marker carryover.
+G4 — End-to-end evaluation,G4 deterministic safety evidence,PARTIAL,No agent execution or human rubric scores.
+B0 — Single Sonnet baseline,No matching artifact,NOT_FOUND,File discovery is not proof of completed metrics.
+B1 — ReAct baseline,eval/results/G3_opus_judge_progress_0cb1264a6d6a.jsonl,EVIDENCE_FOUND,File discovery is not proof of completed metrics.
+B2 — Full multi-agent baseline,No matching artifact,NOT_FOUND,File discovery is not proof of completed metrics.
+A1 — Without critic ablation,No matching artifact,NOT_FOUND,File discovery is not proof of completed metrics.
+A2 — Retrieval ablation,No matching artifact,NOT_FOUND,File discovery is not proof of completed metrics.
+Judge calibration — 10 labels and Cohen's kappa,No matching artifact,NOT_VERIFIED,"Requires 10 independent human labels, paired Opus judgments, agreement and Cohen's kappa."
+"Checkpoint — cost, latency and failure analysis",eval/results/G3_manual_review_final/.ipynb_checkpoints/G3_manual_review_20261120T052658-checkpoint.csv; eval/results/G3_offline_inspection/.ipynb_checkpoints/G3_offline_inspection_20261120T052421-checkpoint.txt,EVIDENCE_FOUND,"Requires B0/B1/B2/A1/A2 metrics, cost/request, p50/p95 latency and three failure analyses."

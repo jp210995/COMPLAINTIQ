@@ -1,0 +1,6 @@
+source_file,rows,columns
+eval/results/G3_failure_analysis.csv,15,"question_id, verdict, passed, unsupported_claims, tone_issues, feedback"
+eval/results/correction_backups/20261106T144421Z_targeted_repair/G3_failure_analysis.csv,15,"question_id, verdict, passed, unsupported_claims, tone_issues, feedback"
+eval/results/correction_backups/20261113T143328Z_targeted_repair/G3_failure_analysis.csv,15,"question_id, verdict, passed, unsupported_claims, tone_issues, feedback"
+eval/results/correction_backups/20261113T160457Z_targeted_repair/G3_failure_analysis.csv,15,"question_id, verdict, passed, unsupported_claims, tone_issues, feedback"
+eval/results/G1_final_closure/G1_closure_20261116T172209Z/G1_failure_analysis.csv,32,"case_id, status, expected_product, predicted_product, product_correct, expected_issue, predicted_issue, issue_correct, expected_sub_issue, predicted_severity, predicted_vulnerable_customer, confidence, guard_flags, latency_seconds, error, expected_issue_normalized, predicted_issue_normalized, issue_correct_normalized"

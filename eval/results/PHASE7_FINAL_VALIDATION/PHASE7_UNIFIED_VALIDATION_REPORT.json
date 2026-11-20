@@ -1,0 +1,132 @@
+{
+  "project": "ComplaintIQ",
+  "phase": "Phase 7",
+  "generated_utc": "2026-11-20T06:26:44.788828+00:00",
+  "validation_mode": "Offline artifact inspection",
+  "bedrock_calls": 0,
+  "agent_execution": false,
+  "source_files_modified": false,
+  "total_result_files_inspected": 204,
+  "phase_evidence": {
+    "G1": {
+      "metrics_files_found": 1,
+      "valid_metrics_files": 1,
+      "known_issue": "Manual annotation coverage was previously reported as 0/60; severity and vulnerability metrics must not be claimed."
+    },
+    "G2": {
+      "artifact_files_found": 10,
+      "readable_json_or_csv": 10,
+      "known_issue": "Strict result-set equality was previously 13/18; 5 additional results were manually accepted as semantic equivalents. Unanswerable refusal evidence requires separate confirmation."
+    },
+    "G3": {
+      "final_evaluation_files": 2,
+      "manual_review_files": 4,
+      "opus_evaluation_files": 7,
+      "known_issue": "17 answerable responses received Opus proxy reviews, 3 abstentions were textually reviewed, and G3-04 citation markers remain a documented carryover. Opus proxy review is not human review."
+    },
+    "G4": {
+      "consolidated_evidence_exists": true,
+      "worksheet_exists": true,
+      "evidence_status": "PARTIAL_G4_OFFLINE_SAFETY_VALIDATION",
+      "known_issue": "Deterministic safety validation completed. End-to-end execution and human rubric evaluation remain outstanding."
+    }
+  },
+  "baseline_evidence": {
+    "B0": [],
+    "B1": [
+      "eval/results/G3_opus_judge_progress_0cb1264a6d6a.jsonl"
+    ],
+    "B2": []
+  },
+  "ablation_evidence": {
+    "A1": [],
+    "A2": []
+  },
+  "judge_calibration": {
+    "candidate_files": 0,
+    "ten_human_labels_verified": false,
+    "ten_opus_comparisons_verified": false,
+    "cohens_kappa_verified": false,
+    "reason": "File discovery alone cannot establish that 10 independent human faithfulness labels were compared with Opus judgments."
+  },
+  "checkpoint_files": [
+    "eval/results/G3_manual_review_final/.ipynb_checkpoints/G3_manual_review_20261120T052658-checkpoint.csv",
+    "eval/results/G3_offline_inspection/.ipynb_checkpoints/G3_offline_inspection_20261120T052421-checkpoint.txt"
+  ],
+  "completion_matrix": [
+    {
+      "requirement": "G1 \u2014 Classification evaluation",
+      "evidence": "G1 closure metrics and prediction artifacts",
+      "status": "PARTIAL",
+      "reason": "Manual severity/vulnerability annotation coverage is incomplete."
+    },
+    {
+      "requirement": "G2 \u2014 SQL analytics evaluation",
+      "evidence": "G2 query results and metrics",
+      "status": "PARTIAL",
+      "reason": "Strict equality and semantic equivalence must remain separately reported; refusal evidence needs confirmation."
+    },
+    {
+      "requirement": "G3 \u2014 Retrieval and answer evaluation",
+      "evidence": "G3 retrieval, citation, Opus and abstention artifacts",
+      "status": "PARTIAL",
+      "reason": "Human review is not fully established; G3-04 citation marker carryover."
+    },
+    {
+      "requirement": "G4 \u2014 End-to-end evaluation",
+      "evidence": "G4 deterministic safety evidence",
+      "status": "PARTIAL",
+      "reason": "No agent execution or human rubric scores."
+    },
+    {
+      "requirement": "B0 \u2014 Single Sonnet baseline",
+      "evidence": "No matching artifact",
+      "status": "NOT_FOUND",
+      "reason": "File discovery is not proof of completed metrics."
+    },
+    {
+      "requirement": "B1 \u2014 ReAct baseline",
+      "evidence": "eval/results/G3_opus_judge_progress_0cb1264a6d6a.jsonl",
+      "status": "EVIDENCE_FOUND",
+      "reason": "File discovery is not proof of completed metrics."
+    },
+    {
+      "requirement": "B2 \u2014 Full multi-agent baseline",
+      "evidence": "No matching artifact",
+      "status": "NOT_FOUND",
+      "reason": "File discovery is not proof of completed metrics."
+    },
+    {
+      "requirement": "A1 \u2014 Without critic ablation",
+      "evidence": "No matching artifact",
+      "status": "NOT_FOUND",
+      "reason": "File discovery is not proof of completed metrics."
+    },
+    {
+      "requirement": "A2 \u2014 Retrieval ablation",
+      "evidence": "No matching artifact",
+      "status": "NOT_FOUND",
+      "reason": "File discovery is not proof of completed metrics."
+    },
+    {
+      "requirement": "Judge calibration \u2014 10 labels and Cohen's kappa",
+      "evidence": "No matching artifact",
+      "status": "NOT_VERIFIED",
+      "reason": "Requires 10 independent human labels, paired Opus judgments, agreement and Cohen's kappa."
+    },
+    {
+      "requirement": "Checkpoint \u2014 cost, latency and failure analysis",
+      "evidence": "eval/results/G3_manual_review_final/.ipynb_checkpoints/G3_manual_review_20261120T052658-checkpoint.csv; eval/results/G3_offline_inspection/.ipynb_checkpoints/G3_offline_inspection_20261120T052421-checkpoint.txt",
+      "status": "EVIDENCE_FOUND",
+      "reason": "Requires B0/B1/B2/A1/A2 metrics, cost/request, p50/p95 latency and three failure analyses."
+    }
+  ],
+  "overall_status": "PHASE7_OFFLINE_VALIDATION_COMPLETE_WITH_GAPS",
+  "notes": [
+    "Artifact discovery does not prove experiment completion.",
+    "Missing model outputs cannot be recreated under the no-inference constraint.",
+    "AI judge assessments must not be represented as independent human labels.",
+    "G4 deterministic safety validation is not full end-to-end evaluation.",
+    "No unsupported metrics have been generated."
+  ]
+}

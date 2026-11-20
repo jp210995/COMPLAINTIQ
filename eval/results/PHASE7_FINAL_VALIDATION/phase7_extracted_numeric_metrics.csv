@@ -1,0 +1,12 @@
+source_file,source_key,json_path,value
+eval/results/G2_analytics_evaluation/run_20261116T174203Z/G2_metrics.json,mean_latency_seconds,$.mean_latency_seconds,3.214
+eval/results/G2_analytics_evaluation/run_20261116T174203Z/G2_metrics.json,p50_latency_seconds,$.p50_latency_seconds,2.937
+eval/results/G2_analytics_evaluation/run_20261116T174203Z/G2_metrics.json,p95_latency_seconds,$.p95_latency_seconds,4.331
+eval/results/G1_two_stage_candidate/run_20261116T170259Z/metrics.json,mean_latency_seconds,$.mean_latency_seconds,4.796
+eval/results/G1_triage_evaluation/run_20261116T161247Z/G1_triage_metrics.json,mean_latency_seconds,$.metrics.mean_latency_seconds,4.202309090909091
+eval/results/G1_triage_evaluation/run_20261116T161247Z/G1_triage_metrics.json,p50_latency_seconds,$.metrics.p50_latency_seconds,3.786
+eval/results/G1_triage_evaluation/run_20261116T161247Z/G1_triage_metrics.json,p95_latency_seconds,$.metrics.p95_latency_seconds,7.230299999999996
+eval/results/G1_subissue_first_candidate/run_20261116T170718Z/metrics.json,mean_latency_seconds,$.mean_latency_seconds,2.5713333333333335
+eval/results/G1_final_closure/G1_closure_20261116T172209Z/G1_final_metrics.json,mean_latency_seconds,$.mean_latency_seconds,4.56600686243327
+eval/results/G1_final_closure/G1_closure_20261116T172209Z/G1_final_metrics.json,p50_latency_seconds,$.p50_latency_seconds,3.833
+eval/results/G1_final_closure/G1_closure_20261116T172209Z/G1_final_metrics.json,p95_latency_seconds,$.p95_latency_seconds,9.08555160774813

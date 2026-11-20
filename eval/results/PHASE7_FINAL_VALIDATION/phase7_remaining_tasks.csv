@@ -1,0 +1,7 @@
+priority,task,action,bedrock_required
+1,Verify B0/B1/B2 baseline metrics,"Inspect discovered artifacts for actual evaluation counts, metrics, cost and latency.",Only if missing results must be generated
+2,Verify A1/A2 ablation metrics,Confirm critic-disabled and dense/BM25/hybrid comparisons from saved results.,Only if missing results must be generated
+3,Judge calibration,Obtain 10 independent human faithful/unfaithful labels and compare with existing Opus judgments; calculate agreement and Cohen's kappa.,"No, if Opus judgments already exist"
+4,Checkpoint validation,"Verify cost/request, p50/p95 latency, experiment coverage and three failure analyses.","No, if existing measurements are available"
+5,Resolve G1/G2/G3/G4 evidence gaps,"Document missing annotations, refusal validation, G3 citation carryover and G4 execution limitations.",No for documentation; yes for missing model outputs
+6,Final Phase 7 report,Prepare evidence-backed results and explicitly disclose incomplete experiments.,No
