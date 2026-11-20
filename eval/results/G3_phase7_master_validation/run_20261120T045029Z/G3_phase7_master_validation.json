@@ -1,0 +1,492 @@
+{
+  "project": "ComplaintIQ",
+  "phase": 7,
+  "validation_type": "Kernel Restart Safe Master Validation",
+  "generated_at_utc": "2026-11-20T04:50:29.508320+00:00",
+  "overall_status": "PASS",
+  "total_checks": 70,
+  "passed_checks": 70,
+  "failed_checks": 0,
+  "warning_checks": 0,
+  "evaluation": {
+    "total_questions": 17,
+    "completed": 17,
+    "pending": 0,
+    "baseline_recommendations": {
+      "ACCEPT": 2,
+      "REVISE": 14,
+      "REJECT": 0,
+      "INSUFFICIENT_EVIDENCE": 1
+    },
+    "final_recommendations": {
+      "ACCEPT": 14,
+      "REVISE": 3,
+      "REJECT": 0,
+      "INSUFFICIENT_EVIDENCE": 0
+    },
+    "remaining_revise_questions": [
+      "G3-04",
+      "G3-06",
+      "G3-15"
+    ]
+  },
+  "human_score_integrity": true,
+  "judge_score_errors": [],
+  "semantic_verdicts": {
+    "G3-02": "REVIEW",
+    "G3-05": "REVIEW",
+    "G3-07": "PASS",
+    "G3-12": "REVIEW",
+    "G3-13": "PASS",
+    "G3-14": "PASS",
+    "G3-15": "PASS"
+  },
+  "g3_06_transition": [
+    "ACCEPT",
+    "REVISE"
+  ],
+  "g3_17_transition": [
+    "INSUFFICIENT_EVIDENCE",
+    "ACCEPT"
+  ],
+  "validation_checks": [
+    {
+      "check": "Project root exists",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq"
+    },
+    {
+      "check": "Evaluation results directory exists",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results"
+    },
+    {
+      "check": "Python version",
+      "status": "PASS",
+      "details": "3.13.18"
+    },
+    {
+      "check": "Pandas available",
+      "status": "PASS",
+      "details": "2.3.3"
+    },
+    {
+      "check": "Artifact exists: Original baseline CSV",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_evaluation_20261116T112452Z.csv"
+    },
+    {
+      "check": "Artifact exists: Final Opus evaluation CSV",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_evaluation.csv"
+    },
+    {
+      "check": "Artifact exists: Final Opus details JSONL",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_details.jsonl"
+    },
+    {
+      "check": "Artifact exists: Final candidates CSV",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_candidates.csv"
+    },
+    {
+      "check": "Artifact exists: Comparison JSON",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_baseline_vs_final_summary.json"
+    },
+    {
+      "check": "Artifact exists: Comparison CSV",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_question_level_comparison.csv"
+    },
+    {
+      "check": "Artifact exists: Structural validation JSON",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_structural_validation_v2.json"
+    },
+    {
+      "check": "Artifact exists: Semantic review JSON",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_semantic_rereview_20261116T124146Z/semantic_review.json"
+    },
+    {
+      "check": "Artifact exists: Consolidated Markdown report",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/ComplaintIQ_Phase7_Final_Report.md"
+    },
+    {
+      "check": "Artifact exists: Consolidated JSON report",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/ComplaintIQ_Phase7_Final_Report.json"
+    },
+    {
+      "check": "Artifact exists: Reconstructed Opus summary",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/G3_reconstructed_final_opus_summary.json"
+    },
+    {
+      "check": "Artifact exists: Remaining review findings CSV",
+      "status": "PASS",
+      "details": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/G3_remaining_review_findings.csv"
+    },
+    {
+      "check": "All Phase 7 source files loaded",
+      "status": "PASS",
+      "details": "CSV, JSON and JSONL"
+    },
+    {
+      "check": "Baseline: 17 unique G3 IDs",
+      "status": "PASS",
+      "details": "Rows=17, unique IDs=17"
+    },
+    {
+      "check": "Final evaluation: 17 unique G3 IDs",
+      "status": "PASS",
+      "details": "Rows=17, unique IDs=17"
+    },
+    {
+      "check": "Final candidates: 17 unique G3 IDs",
+      "status": "PASS",
+      "details": "Rows=17, unique IDs=17"
+    },
+    {
+      "check": "Comparison: 17 unique G3 IDs",
+      "status": "PASS",
+      "details": "Rows=17, unique IDs=17"
+    },
+    {
+      "check": "Final details contain all 17 questions",
+      "status": "PASS",
+      "details": "Records=17"
+    },
+    {
+      "check": "Final CSV contains llm_judge_status",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Final CSV contains judge_recommendation",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "All 17 evaluations completed",
+      "status": "PASS",
+      "details": "17/17"
+    },
+    {
+      "check": "Zero pending evaluations",
+      "status": "PASS",
+      "details": "0"
+    },
+    {
+      "check": "Baseline recommendation distribution",
+      "status": "PASS",
+      "details": "{'ACCEPT': 2, 'REVISE': 14, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 1}"
+    },
+    {
+      "check": "Final recommendation distribution",
+      "status": "PASS",
+      "details": "{'ACCEPT': 14, 'REVISE': 3, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 0}"
+    },
+    {
+      "check": "Final recommendations match comparison JSON",
+      "status": "PASS",
+      "details": "{'ACCEPT': 14, 'REVISE': 3, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 0}"
+    },
+    {
+      "check": "Final recommendations match reconstructed summary",
+      "status": "PASS",
+      "details": "{'ACCEPT': 14, 'REVISE': 3, 'REJECT': 0, 'INSUFFICIENT_EVIDENCE': 0}"
+    },
+    {
+      "check": "Human score preserved: factual_correctness_1_to_5",
+      "status": "PASS",
+      "details": "Candidate input versus final Opus output"
+    },
+    {
+      "check": "Human score preserved: regulatory_accuracy_1_to_5",
+      "status": "PASS",
+      "details": "Candidate input versus final Opus output"
+    },
+    {
+      "check": "Human score preserved: evidence_grounding_1_to_5",
+      "status": "PASS",
+      "details": "Candidate input versus final Opus output"
+    },
+    {
+      "check": "Human score preserved: citation_quality_1_to_5",
+      "status": "PASS",
+      "details": "Candidate input versus final Opus output"
+    },
+    {
+      "check": "Human score preserved: completeness_1_to_5",
+      "status": "PASS",
+      "details": "Candidate input versus final Opus output"
+    },
+    {
+      "check": "Final judge scores within 1–5",
+      "status": "PASS",
+      "details": "Validated score values=85; errors=0"
+    },
+    {
+      "check": "Five score dimensions present",
+      "status": "PASS",
+      "details": "{'regulatory_accuracy', 'factual_correctness', 'evidence_grounding', 'citation_quality', 'completeness'}"
+    },
+    {
+      "check": "Score dimension available: factual",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Score dimension available: regulatory",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Score dimension available: evidence",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Score dimension available: citation",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Score dimension available: completeness",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Comparison score calculations valid",
+      "status": "PASS",
+      "details": "Means within 1–5 and deltas reconciled"
+    },
+    {
+      "check": "Structural validation overall result",
+      "status": "PASS",
+      "details": "STRUCTURAL_PASS"
+    },
+    {
+      "check": "Structural global check: exactly_17_questions",
+      "status": "PASS",
+      "details": "True"
+    },
+    {
+      "check": "Structural global check: all_7_targets_changed",
+      "status": "PASS",
+      "details": "True"
+    },
+    {
+      "check": "Structural global check: no_unexpected_changes",
+      "status": "PASS",
+      "details": "True"
+    },
+    {
+      "check": "Structural global check: G3_06_and_G3_09_preserved",
+      "status": "PASS",
+      "details": "True"
+    },
+    {
+      "check": "Structural global check: all_questions_structurally_pass",
+      "status": "PASS",
+      "details": "True"
+    },
+    {
+      "check": "Structural validation contains all 17 questions",
+      "status": "PASS",
+      "details": "Rows=17, unique IDs=17"
+    },
+    {
+      "check": "All 17 questions have STRUCTURAL_PASS",
+      "status": "PASS",
+      "details": "17/17"
+    },
+    {
+      "check": "No structural issues reported",
+      "status": "PASS",
+      "details": "Issues=0"
+    },
+    {
+      "check": "All seven targeted corrections recorded",
+      "status": "PASS",
+      "details": "Targets=7/7"
+    },
+    {
+      "check": "No unexpected answer changes",
+      "status": "PASS",
+      "details": "[]"
+    },
+    {
+      "check": "Structural status count equals 17",
+      "status": "PASS",
+      "details": "{'STRUCTURAL_PASS': 17}"
+    },
+    {
+      "check": "Semantic review references seven targeted questions",
+      "status": "PASS",
+      "details": "Found=7/7"
+    },
+    {
+      "check": "Semantic review artifact parsed",
+      "status": "PASS",
+      "details": "Explicit question verdicts extracted=7"
+    },
+    {
+      "check": "Three remaining REVISE questions",
+      "status": "PASS",
+      "details": "['G3-04', 'G3-06', 'G3-15']"
+    },
+    {
+      "check": "Remaining findings CSV contains three questions",
+      "status": "PASS",
+      "details": "Rows=3"
+    },
+    {
+      "check": "G3-17 recommendation transition",
+      "status": "PASS",
+      "details": "INSUFFICIENT_EVIDENCE -> ACCEPT"
+    },
+    {
+      "check": "G3-06 recommendation transition",
+      "status": "PASS",
+      "details": "ACCEPT -> REVISE"
+    },
+    {
+      "check": "G3-06: present in all three datasets",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "G3-09: present in all three datasets",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Markdown report is non-empty",
+      "status": "PASS",
+      "details": "Characters=15296"
+    },
+    {
+      "check": "JSON report is valid",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Reconstructed summary is valid",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Report mentions 17 completed evaluations",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Report mentions 14 ACCEPT and 3 REVISE",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Report mentions remaining review questions",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "check": "Artifact SHA256 manifest generated",
+      "status": "PASS",
+      "details": "Files hashed=12"
+    }
+  ],
+  "artifact_manifest": [
+    {
+      "file": "G3_opus_judge_evaluation_20261116T112452Z.csv",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_opus_judge_evaluation_20261116T112452Z.csv",
+      "size_bytes": 558772,
+      "sha256": "2a52db94a22ca9535d92655933ef9af394cf28fe076e32c40b0ce27fb42b0f3f",
+      "last_modified_utc": "2026-11-20T04:31:26.432589+00:00"
+    },
+    {
+      "file": "G3_final_opus_evaluation.csv",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_evaluation.csv",
+      "size_bytes": 760767,
+      "sha256": "1919b87be48abc3ada3c12aa8dc97357f5880147d8ff2ca7525018043398c93d",
+      "last_modified_utc": "2026-11-20T04:31:26.422589+00:00"
+    },
+    {
+      "file": "G3_final_opus_details.jsonl",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_final_independent_opus_evaluation/run_20261116T131325Z/G3_final_opus_details.jsonl",
+      "size_bytes": 112132,
+      "sha256": "63878abd843578b9c6c49223de3a80f666f3d509d5fb5b8ef392e90a56649392",
+      "last_modified_utc": "2026-11-20T04:31:26.422589+00:00"
+    },
+    {
+      "file": "G3_final_candidates.csv",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_final_targeted_corrections_20261116T124502Z/G3_final_candidates.csv",
+      "size_bytes": 655451,
+      "sha256": "cdbb3c2043cb5b4d32b66e7513fb245f0219c2e1a41f8e9baf714c13cb299f6d",
+      "last_modified_utc": "2026-11-20T04:31:26.432589+00:00"
+    },
+    {
+      "file": "G3_baseline_vs_final_summary.json",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_baseline_vs_final_summary.json",
+      "size_bytes": 2905,
+      "sha256": "114231b769b95b50123c675c39f6cbff0a53935c1049fa3ec9bac05238be7857",
+      "last_modified_utc": "2026-11-20T04:31:26.382589+00:00"
+    },
+    {
+      "file": "G3_question_level_comparison.csv",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_baseline_vs_final_comparison/run_20261116T131526Z/G3_question_level_comparison.csv",
+      "size_bytes": 1409,
+      "sha256": "4b63c0ec751b0ae445215bc8f042bc8b7e73f650e377b87dcbc76165c4145d02",
+      "last_modified_utc": "2026-11-20T04:31:26.382589+00:00"
+    },
+    {
+      "file": "G3_structural_validation_v2.json",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_structural_validation_v2.json",
+      "size_bytes": 870,
+      "sha256": "69550dfe0fd4a09599cdef39f9095155b88d5fd84b7a887ebdaf684abac28554",
+      "last_modified_utc": "2026-11-20T04:31:26.442589+00:00"
+    },
+    {
+      "file": "semantic_review.json",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_remediation_20261116T115219Z/G3_targeted_corrections_20261116T123314Z/G3_semantic_rereview_20261116T124146Z/semantic_review.json",
+      "size_bytes": 22680,
+      "sha256": "a1c18e7a6b49df74ec42d497797563a1be207cd715b1e9ddf6527d019dcc3ba6",
+      "last_modified_utc": "2026-11-20T04:31:26.442589+00:00"
+    },
+    {
+      "file": "ComplaintIQ_Phase7_Final_Report.md",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/ComplaintIQ_Phase7_Final_Report.md",
+      "size_bytes": 15316,
+      "sha256": "9419b387fde40a8bf1bcf02cdb108cd73dbc504c9a7dc3d4167ef722a2266eb3",
+      "last_modified_utc": "2026-11-20T04:31:26.432589+00:00"
+    },
+    {
+      "file": "ComplaintIQ_Phase7_Final_Report.json",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/ComplaintIQ_Phase7_Final_Report.json",
+      "size_bytes": 11358,
+      "sha256": "7f5dab515e921cf4b83b802bd68f9d516bdc9accc7029ed0e094fabeb6e8bdf6",
+      "last_modified_utc": "2026-11-20T04:31:26.432589+00:00"
+    },
+    {
+      "file": "G3_reconstructed_final_opus_summary.json",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/G3_reconstructed_final_opus_summary.json",
+      "size_bytes": 2806,
+      "sha256": "8146248155ff5587a0ee0c1a4d14aaadfc3e2736144df301c4d489766b0ccf79",
+      "last_modified_utc": "2026-11-20T04:31:26.432589+00:00"
+    },
+    {
+      "file": "G3_remaining_review_findings.csv",
+      "path": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_consolidated_report/run_20261116T132310Z/G3_remaining_review_findings.csv",
+      "size_bytes": 7433,
+      "sha256": "f6cd536e38355ae66d32e7fa6136e0ae4024f759ec1634ddb47b9b249da6cb4e",
+      "last_modified_utc": "2026-11-20T04:31:26.432589+00:00"
+    }
+  ],
+  "validation_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_master_validation/run_20261120T045029Z/G3_phase7_validation_checks.csv",
+  "manifest_csv": "/home/sagemaker-user/complaintiq/eval/results/G3_phase7_master_validation/run_20261120T045029Z/G3_phase7_artifact_manifest.csv"
+}
