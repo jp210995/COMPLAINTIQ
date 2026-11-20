@@ -697,504 +697,123 @@ The consolidated saved validation output also records 80/80 checks passed for it
 
 ### Objective
 
-Evaluate the platform using structured test datasets, gold-standard questions, retrieval checks, answer generation, citation validation, critic evaluation, and human review.
+Phase 7 evaluates complaint triage, structured analytics, regulatory question answering, and safety controls. The evaluation evidence is consolidated, but the overall phase remains **partially complete** because some acceptance activities are incomplete or unavailable.
 
-Phase 7 is the evaluation and quality-validation phase.
+### 7.1 G1 – Complaint triage
 
-It contains three major evaluation tracks:
+- Gold dataset: 60 complaints.
+- Final closure run: 60/60 cases completed successfully after recovery of the five initial failures.
+- Product accuracy: **90.00%**.
+- Normalized issue accuracy: **46.67%**.
+- Normalized issue macro-F1: **0.3444**.
+- Final closure latency: mean **4.566 s**, p50 **3.833 s**, p95 **9.086 s**.
 
-- G1 – Complaint triage evaluation.
-- G2 – Structured analytics evaluation.
-- G3 – Regulatory question-answering evaluation.
+The final closure metrics represent product and issue classification. The separate manual severity/vulnerability annotation worksheet remained unannotated (0/60 completed); severity and vulnerable-customer performance therefore have not been measured.
 
-**Important: Phase 7 implementation and evaluation activities have been performed, but the phase is not yet fully complete. Several empirical and manual validation tasks remain outstanding.**
+### 7.2 G2 – Structured analytics
 
----
+- Gold dataset: 20 questions (18 answerable, 2 unanswerable).
+- Agent outputs evaluated: 18 answerable questions.
+- Strict result-set equality: **13/18 (72.22%)**.
+- Five additional cases (G2-04, G2-05, G2-13, G2-15, G2-18) were manually accepted as semantically equivalent after review. Keep this separate from the strict equality score.
+- G2 latency: mean **3.214 s**, p50 **2.937 s**, p95 **4.331 s**.
 
-### 7.1 G1 – Complaint Triage Evaluation
+The two unanswerable questions concern population data and household income that are unavailable in the dataset. The available evidence does not establish that the system's refusal behavior was successfully validated for both questions.
 
-#### Objective
+### 7.3 G3 – Regulatory question answering
 
-Evaluate whether the system can correctly identify complaint product, issue, sub-issue, severity, and vulnerability-related information.
+- Gold dataset: 20 questions (17 answerable, 3 intentionally unanswerable).
+- All 17 answerable-question generations completed.
+- Retrieval: mean Recall@5 **25.64%**, mean Recall@10 **39.30%**, hit rate@5 **94.12%**, and MRR **79.90%**.
+- Citations: 167 total; 164 valid and 3 invalid; citation-ID validity **98.20%**.
+- Critic: 17 executions; 13 successful critic decisions (2 PASS, 11 REVISE) and 4 critic failures.
+- Independent Opus evaluation: **14 ACCEPT, 3 REVISE**. The REVISE cases are G3-04, G3-06, and G3-15.
+- Manual review worksheet: 20 rows; 14 ACCEPT, 3 REVISE, and 3 unanswerable cases marked ACCEPT after review. The 17 answerable ratings were Opus-proxy assessments, not independent human compliance review.
+- The three unanswerable cases (G3-18/19/20) had acceptable refusal wording on manual inspection, but the automated abstention detector passed 0/3. Preserve the detector result and the manual assessment as separate evidence.
 
-#### Dataset preparation
+The earlier G3 master validation recorded 70/70 structural/master checks passed. That result does not override the later citation counts, critic outcomes, semantic review, or the need for human regulatory review. A valid citation ID does not prove that the cited text supports the associated claim.
 
-A 60-record evaluation dataset was created.
+### 7.4 G4 – Safety and end-to-end scenarios
 
-The records contain:
+- Ten synthetic scenarios were prepared, including two prompt-injection cases and two vulnerable-customer cases.
+- Offline guard validation: **10/10 injection checks passed**; both injection attempts were detected, with no false positives in the eight non-injection cases.
+- Synthetic PII checks: **8/8 passed**, covering SSN, email, phone, and card-number redaction and long-input truncation.
+- Human evaluation worksheet: 10 cases, still pending human rubric review.
 
-```json
-{
-  "case_id": "...",
-  "request": "...",
-  "expected": {
-    "product": "...",
-    "issue": "...",
-    "sub_issue": "..."
-  },
-  "manual_annotation": {
-    "severity": null,
-    "vulnerable_customer": null,
-    "vulnerability_signals": null,
-    "regulation_hints": null,
-    "summary": null
-  },
-  "source": {},
-  "annotation_status": "pending"
-}
-```
+G4 evidence is limited to offline guard/PII checks. It does not establish full agent execution, triage accuracy, final-response quality, or completion of the human 1–5 evaluation rubric.
 
-#### Manual annotation template
+### 7.5 Cross-track Phase 7 checkpoint
 
-A separate CSV template was prepared with the following fields:
+The consolidated offline audit found:
 
-```text
-case_id
-severity
-vulnerable_customer
-vulnerability_signals
-regulation_hints
-summary
-reviewer
-review_notes
-annotation_status
-```
-
-#### Dataset composition
-
-| Product | Records |
-|---|---:|
-| Checking or savings | 32 |
-| Credit card | 28 |
-| Total | 60 |
-
-#### Validation results
-
-The following structural validation results were obtained:
-
-| Validation | Result |
-|---|---:|
-| JSONL records | 60 |
-| Unique case IDs | 60 |
-| CSV rows | 60 |
-| Schema errors | 0 |
-| Complete manual annotation records | 0 |
-
-The dataset was also checked for overlap with the June holdout.
-
-#### Current G1 status
-
-The G1 dataset and annotation template are structurally validated.
-
-However, manual annotation remains pending.
-
-Therefore, severity and vulnerability evaluation metrics should not be treated as completed or empirically validated.
-
-**G1 status: Dataset preparation and structural validation completed; human annotation and final metric calculation pending.**
-
----
-
-### 7.2 G2 – Structured Analytics Evaluation
-
-#### Objective
-
-Evaluate the analytical accuracy of the platform's SQL-based complaint analytics workflow.
-
-#### Evaluation dataset
-
-A set of 20 analytical questions was prepared.
-
-The questions were classified as:
-
-| Category | Count |
-|---|---:|
-| Answerable | 18 |
-| Unanswerable | 2 |
-| Total | 20 |
-
-#### Reference SQL generation
-
-Reference SQL queries were generated for the analytical questions.
-
-The implementation used:
-
-- DuckDB.
-- SQL validation.
-- `guard_sql`.
-- Read-only query execution.
-- Reference result generation.
-
-The objective was to compare the agent's generated analytical results against independently executed reference queries.
-
-#### Validation activities
-
-The following were performed:
-
-- Evaluation question preparation.
-- Answerability classification.
-- Reference SQL generation.
-- SQL guard validation.
-- Reference query execution.
-- Gold and expected output preparation.
-- Structural validation of evaluation artifacts.
-
-#### Current G2 status
-
-The evaluation dataset and reference artifacts were prepared and structurally validated.
-
-However, the complete empirical comparison between actual agent outputs and reference results remains pending.
-
-Consequently, no final analytical accuracy score should be reported yet.
-
-**G2 status: Evaluation dataset and reference outputs prepared; agent-versus-reference empirical evaluation pending.**
-
----
-
-### 7.3 G3 – Regulatory Question-Answering Evaluation
-
-#### Objective
-
-Evaluate whether the system can answer regulatory questions accurately using retrieved CFR, examination manual, and supervisory evidence.
-
-This evaluation focuses on:
-
-- Regulatory correctness.
-- Evidence relevance.
-- Citation validity.
-- Grounded answer generation.
-- Appropriate abstention.
-- Critic-based quality assessment.
-
-#### Evaluation dataset
-
-A set of 20 regulatory questions was prepared.
-
-| Category | Count |
-|---|---:|
-| Answerable questions | 17 |
-| Intentionally unanswerable questions | 3 |
-| Total | 20 |
-
-The 17 answerable questions covered regulatory subjects such as:
-
-- Regulation E.
-- Regulation Z.
-- Regulation V.
-- Regulation F.
-- Regulation DD.
-- Supervisory Highlights.
-
-Three questions were deliberately designed around proprietary Harbourline-specific information, which was not available in the knowledge corpus. These questions were intended to test whether the platform would abstain rather than fabricate information.
-
-#### Gold-standard artifacts
-
-The following files were prepared:
-
-```text
-eval/gold/G3_regulatory_gold.jsonl
-eval/gold/G3_supervisory_candidates.jsonl
-eval/results/G3_gold_resolution_summary.csv
-```
-
-One supervisory question, G3-17, was manually mapped to a specific source chunk:
-
-```text
-sh_issue22_2020-09_page_0011_chunk_0001
-```
-
-Source:
-
-```text
-sh_issue22_2020-09.pdf
-```
-
-Page:
-
-```text
-11
-```
-
-The chunk concerned a supervisory finding involving an advertised bonus offer and Regulation DD.
-
-This mapping represents one verified finding and should not be interpreted as complete coverage of every deposit-account supervisory finding.
-
-#### Retrieval evaluation
-
-The G3 retrieval evaluation was executed.
-
-Output artifacts:
-
-```text
-G3_retrieval_results.csv
-G3_retrieval_summary.json
-```
-
-The retrieval evaluation examined whether relevant regulatory and supervisory chunks could be retrieved for the gold questions.
-
-#### Answer generation
-
-The answer-generation process was executed for all 17 answerable questions.
-
-Generation output:
-
-```text
-G3_generated_answers.jsonl
-```
-
-All 17 answer-generation executions completed.
-
-#### Citation validation
-
-Citation validation was implemented to check the relationship between answer citation identifiers and the evidence supplied to the answer.
-
-The citation parser was corrected to support multiple citation IDs within a single citation marker.
-
-The validation process was also improved to distinguish:
-
-- Valid citation IDs.
-- Invalid citation IDs.
-- Citation counts.
-- Answers containing unsupported references.
-
-#### Critic evaluation
-
-The critic was executed against the 17 generated answers.
-
-An initial correction run produced the following result:
-
-| Result | Count |
-|---|---:|
-| PASS | 2 |
-| REVISE | 11 |
-| UNKNOWN | 4 |
-| Total | 17 |
-
-A subsequent validation and resolution run recovered all 17 drafts and corrected the citation parsing and critic result handling.
-
-Run ID:
-
-```text
-20261106T142806Z
-```
-
-The corrected result was:
-
-| Validation item | Result |
-|---|---:|
-| Total answers | 17 |
-| Drafts recovered or generated | 17 |
-| Unresolved drafts | 0 |
-| Total citations | 80 |
-| Valid citation IDs | 80 |
-| Invalid citation IDs | 0 |
-| Critic executions | 17 |
-| Critic errors | 0 |
-| PASS | 2 |
-| REVISE | 15 |
-
-This established that all 80 citation identifiers existed in the supplied evidence arrays.
-
-It did **not** establish that all 80 citations semantically supported their associated statements.
-
-#### G3 failure analysis
-
-A detailed failure analysis was performed on the 15 answers marked REVISE.
-
-The analysis identified several recurring issues:
-
-1. Regulatory chunks were truncated before the full provision was available.
-2. Some answers included claims that were not present in the cited evidence.
-3. Some citations referenced the wrong chunk.
-4. Some numerical claims were unsupported.
-5. Some regulatory exceptions were extrapolated beyond the supplied text.
-6. Some supervisory findings were not sufficiently qualified as examiner observations.
-7. Some answers contained additional explanations that could not be substantiated using the available evidence.
-
-The failure analysis was saved as:
-
-```text
-eval/results/G3_failure_analysis.csv
-```
-
-Examples of identified issues included:
-
-- Regulation E provisional credit and error-resolution requirements.
-- Regulation E consumer liability and negligence examples.
-- Regulation Z billing-error procedures.
-- Regulation V furnisher investigation and dispute obligations.
-- Regulation F debt collection restrictions.
-- Regulation DD disclosure requirements.
-- Interest calculation and compounding provisions.
-
-The key finding was that valid citation identifiers alone are insufficient. The cited source text must actually contain the regulatory statement being made.
-
-#### Targeted repair attempt
-
-A targeted repair attempt was executed.
-
-Run ID:
-
-```text
-20261106T144421Z
-```
-
-The attempted process:
-
-1. Loaded the 15 failed answers.
-2. Loaded their critic feedback.
-3. Retrieved fresh evidence through the research node.
-4. Merged original and fresh evidence.
-5. Passed the critic feedback through attempted revision fields.
-6. Invoked the drafter.
-7. Re-ran the critic.
-8. Saved the repair outputs.
-
-The repair artifacts included:
-
-```text
-G3_repaired_answers.jsonl
-G3_repair_summary.csv
-G3_repair_errors.jsonl
-G3_targeted_repair_run_summary.json
-```
-
-However, the subsequent diagnostic established that the repair attempt had not changed the answer text.
-
-#### Repair diagnostic findings
-
-The diagnostic compared the original and repaired answers.
-
-| Diagnostic | Result |
-|---|---:|
-| Failed answers processed | 15 |
-| Identical drafts | 15 |
-| Changed drafts | 0 |
-| New evidence chunks | 0 |
-| Critic PASS after repair | 0 |
-| Critic REVISE after repair | 15 |
-
-The drafts were byte-for-byte identical.
-
-The original and repaired evidence IDs were also identical.
-
-This indicated that the attempted repair did not successfully pass the critic's feedback into an effective revision process.
-
-Further investigation identified that:
-
-- `drafter_node` accepts a `CIQState` object.
-- `CIQState` includes a `critique` field.
-- The drafter references a variable named `critique`.
-- The earlier repair attempt passed guessed feedback fields without verifying that the drafter consumed them.
-- The research node uses the existing `REG_INDEX.search` method.
-- Repeating the same search produced the same eight evidence chunks for the tested questions.
-
-The next step is to inspect the exact drafter implementation and retrieval behavior before implementing another repair.
-
-#### G3 artifacts
-
-The following evaluation artifacts were created or updated:
-
-```text
-eval/results/G3_retrieval_results.csv
-eval/results/G3_retrieval_summary.json
-eval/results/G3_generated_answers.jsonl
-eval/results/G3_citation_results.csv
-eval/results/G3_critic_summary.csv
-eval/results/G3_critic_results.jsonl
-eval/results/G3_generated_answers_validated.jsonl
-eval/results/phase7_validation_resolution_summary.json
-eval/results/G3_failure_analysis.csv
-eval/results/G3_repaired_answers.jsonl
-eval/results/G3_repair_summary.csv
-eval/results/G3_repair_errors.jsonl
-eval/results/G3_targeted_repair_run_summary.json
-```
-
-Correction backups were retained under:
-
-```text
-eval/results/correction_backups/
-```
-
-#### Latest G3 independent Opus evaluation and Phase 7 master validation
-
-A subsequent independent evaluation was completed for all 17 answerable G3 questions using Claude Opus 4.8. The saved evaluation output records:
-
-| Result | Count |
-|---|---:|
-| Questions evaluated | 17 |
-| ACCEPT | 14 |
-| REVISE | 3 |
-
-The three questions marked REVISE were G3-04, G3-06, and G3-15. This is the latest independent Opus evaluation result and supersedes the earlier 2 PASS / 15 REVISE critic-run summary as the current G3 evaluation snapshot. The earlier run remains part of the development history and failure-analysis record.
-
-The saved `Validation(1).ipynb` also contains an executed Phase 7 G3 master validation cell (cell index 284; saved `execution_count` 1). Its recorded result is:
-
-| Master validation item | Result |
-|---|---:|
-| Checks | 70 |
-| Passed | 70 |
-| Failed | 0 |
-| Warnings | 0 |
-
-The master validation output records all 17 G3 questions as evaluated and reports 17/17 structural checks passed. Its semantic review records four PASS and three REVIEW outcomes. The three REVIEW outcomes are not equivalent to failed structural checks; they indicate items that still require attention.
-
-The Opus evaluation and the master validation are validation evidence for the G3 work performed. They do not constitute legal advice, regulatory approval, or sign-off by a human compliance reviewer.
-
-#### Current G3 status
-
-| Activity | Status |
+| Checkpoint item | Current evidence |
 |---|---|
-| Gold question preparation | Completed |
-| Retrieval evaluation | Executed |
-| Answer generation | 17/17 executed |
-| Citation ID validation | Completed |
-| Earlier critic evaluation and failure analysis | Completed |
-| Targeted repair attempt | Attempted; earlier repair was ineffective |
-| Independent Opus evaluation | 17 evaluated; 14 ACCEPT / 3 REVISE |
-| Phase 7 G3 master validation | 70/70 checks passed |
-| Structural validation | 17/17 passed |
-| Semantic review | 4 PASS / 3 REVIEW |
-| Follow-up on G3-04, G3-06 and G3-15 | Pending |
-| Manual regulatory/compliance review | Pending |
-| Unanswerable-question abstention validation | Pending |
+| G1 | PARTIAL |
+| G2 | PARTIAL |
+| G3 | PARTIAL |
+| G4 | PARTIAL |
+| B0 / B1 / B2 baselines | NOT FOUND |
+| A1 / A2 ablations | NOT FOUND |
+| Ten-case human judge calibration | NOT VERIFIED |
+| Human Cohen's kappa | NOT AVAILABLE |
+| Cost per request | NOT AVAILABLE |
+| Comparable checkpoint latency table | INCOMPLETE |
+| Failure analyses | 3 documented |
 
-**G3 status: Independent evaluation and master validation executed successfully; three answers remain marked REVISE, and semantic/manual review and abstention validation remain open.**
+Three selected failure analyses were recorded: two G1 classification errors and one G3 unsupported-regulatory-claim case (G3-04). The audit covered 204 result files; duplicated failure-analysis files should not be counted as unique cases.
+
+A 10-case calibration worksheet was prepared. An AI-assisted assessment was also created separately, but it is not human ground truth and must not be represented as human calibration or used to claim human Cohen's kappa.
+
+**Phase 7 status: PARTIAL_EVIDENCE_CONSOLIDATED.** The available metrics and artifacts are useful evaluation evidence, but the baseline/ablation experiments, genuine human judge calibration, cost-per-request evidence, and remaining human review are not complete.
+
+---
+
+## Phase 8 – Offline Demonstration Notebook
+
+An offline demonstration interface was implemented in `notebooks/07_demo.ipynb` (Option A).
+
+- The notebook provides a local, notebook-based view of saved project and evaluation artifacts.
+- The notebook contains 17 cells and passed notebook-format validation.
+- The user executed Restart Kernel and Run All; the saved run completed all 17 cells without execution errors.
+- The Phase 7 dashboard was corrected to use the consolidated checkpoint summary as the authoritative source. It displays G1–G4 as PARTIAL, B0/B1/B2/A1/A2 as NOT_FOUND, judge calibration as NOT_VERIFIED, cost per request as NOT_AVAILABLE, and checkpoint latency comparison as INCOMPLETE.
+- The notebook includes local demonstration controls for previewing approve/edit/reject decisions. These controls represent a local UI demonstration; they are not evidence of a deployed application or a new LangGraph interrupt/resume test.
+
+No online Streamlit application or production web deployment is included in the current scope.
+
+**Phase 8 status: Offline notebook UI implemented and notebook execution validated.**
 
 ---
 
 # 5. Current Phase and Consolidated Validation Status
 
-## 5.1 Current project phase
+## 5.1 Current project status
 
-**Current phase: Phase 7 – Evaluation and Quality Validation.**
+The core ComplaintIQ platform implementation and the selected offline demonstration scope are in place. Phase 7 evaluation evidence has been consolidated, but Phase 7 is not fully complete. The project should be described as a validated prototype with documented evaluation gaps, not as a production-ready banking complaints platform.
 
-The project is currently in the G3 regulatory question-answering evaluation and refinement workstream. The latest saved G3 evaluation covers 17 answerable questions, with 14 ACCEPT and 3 REVISE from the independent Opus evaluation. The Phase 7 G3 master validation cell records 70/70 checks passed.
+## 5.2 Consolidated evaluation status
 
-Phase 7 as a whole is **not complete**. G1 manual annotation and final metrics, G2 agent-versus-reference empirical comparison, remaining G3 review/follow-up, and the broader cross-track acceptance activities still need to be completed.
+| Track | Latest evidence | Remaining qualification |
+|---|---|---|
+| G1 – Triage | 60/60 final closure; product accuracy 90.00%; normalized issue accuracy 46.67%; issue macro-F1 0.3444 | Severity/vulnerability annotation remains 0/60 |
+| G2 – Analytics | Strict equality 13/18 (72.22%); five additional semantic equivalences manually accepted | Two unanswerable refusal outcomes not proven |
+| G3 – Regulatory QA | 17 answerable cases; Opus 14 ACCEPT / 3 REVISE; retrieval and citation metrics recorded | Three REVISE cases, human compliance review, and automated abstention validation remain open |
+| G4 – Safety | Guard 10/10; synthetic PII checks 8/8 | Human rubric pending; no full agent end-to-end validation |
+| Phase 8 – Demo | `07_demo.ipynb` executed successfully across 17 cells | Notebook-based demonstration only; no online deployment |
 
-## 5.2 Consolidated validation status
+## 5.3 Important validation evidence
 
-| Evaluation track | Prepared dataset | Executed validation evidence | Remaining work |
-|---|---|---|---|
-| G1 – Triage | 60 records | Dataset/schema structure validated | Manual annotation and final triage metrics |
-| G2 – Analytics | 20 questions | Reference SQL and expected outputs prepared | Agent-versus-reference empirical comparison and metrics |
-| G3 – Regulatory QA | 20 questions (17 answerable, 3 intentionally unanswerable) | 17 answerable questions evaluated; Opus result 14 ACCEPT / 3 REVISE; G3 master validation 70/70 checks passed | Resolve/review the 3 REVISE answers; semantic and human review; validate abstention on 3 unanswerable questions |
-
-## 5.3 Completed validation evidence
-
-- Phase 0–5 unified validation: 156/156 checks passed (P0 19/19, P1 5/5, P2 14/14, P3 44/44, P4 16/16, P5 58/58).
+- Phase 0–5 unified validation: 156/156 checks passed.
 - Phase 0–6 consolidated validation output: 80/80 checks passed.
-- Phase 6 workflow test: all five intents exercised, including human interrupt/resume.
-- Phase 6 approved live publishing run: three report objects (`ANALYTICS`, `BRIEF`, `REG_QA`) uploaded to the documented S3 prefix and verified; three audit records verified.
-- Phase 7 G3 master validation: 70/70 checks passed, with 17/17 structural checks passed.
-- Independent G3 Opus evaluation: 17 questions evaluated; 14 ACCEPT and 3 REVISE.
+- Phase 6 workflow validation exercised five intents and the human interrupt/resume path.
+- A separate approved live S3 publishing run verified three report objects (ANALYTICS, BRIEF, REG_QA) and three audit records.
+- G3 master validation recorded 70/70 checks passed; this is structural/master validation, not semantic or human regulatory approval.
+- Phase 7 consolidated audit status: `PHASE7_PARTIAL_EVIDENCE_CONSOLIDATED`.
 
-These validation counts belong to different scopes and runs; they are not additive. A passed structural/master validation does not imply that every answer is semantically correct or has received human regulatory approval.
+These counts belong to different validation scopes and must not be added together or interpreted as a single overall pass rate.
 
-## 5.4 Overall status
+## 5.4 Scope decision for the demonstration
 
-The core platform implementation and the Phase 6 workflow/publishing demonstrations are complete within the scope described above. Phase 7 remains in progress, and the project should continue to be described as a partially completed prototype rather than a production-ready banking complaints platform.
+The selected demonstration deliverable is the offline Jupyter notebook UI in `notebooks/07_demo.ipynb`. An online Streamlit application is not part of the current implementation scope. The user has indicated that a demo video is not required for the current project deliverable.
 
 ---
 
@@ -1293,93 +912,76 @@ complaintiq/
 
 | Phase | Description | Status |
 |---|---|---|
-| Phase 1 | Project foundation and initial setup | Foundation established; historical detail incomplete |
+| Phase 1 | Project foundation and initial setup | Foundation established; detailed historical setup record incomplete |
 | Phase 2 | Data engineering and knowledge preparation | Completed |
-| Phase 3 | RAG and vector retrieval | Core implementation completed |
-| Phase 4 | LLM integration and model wrapper | Completed |
+| Phase 3 | RAG and vector retrieval | Core implementation completed; retrieval precision/source completeness limitations documented |
+| Phase 4 | LLM integration and model wrapper | Core implementation completed |
 | Phase 5 | Multi-agent implementation | Core implementation completed |
 | Phase 6 | LangGraph orchestration | Core workflow validated; approved S3 publishing demonstrated for three reports |
-| Phase 7 | Evaluation and quality validation | In progress; G3 master validation passed, 14 ACCEPT / 3 REVISE |
+| Phase 7 | Evaluation and quality validation | Partial evidence consolidated; outstanding human, baseline, ablation, abstention, and cost evidence |
+| Phase 8 | Demonstration | Offline notebook UI implemented; no online deployment |
 
-### Completed implementation milestones
+### Completed implementation and validation milestones
 
-- Complaint dataset preparation.
-- June holdout separation.
-- Regulatory document processing.
-- Titan embedding generation.
-- FAISS indexing.
-- Complaint and regulatory retrieval.
-- Bedrock LLM integration.
-- Structured JSON generation.
-- Usage and latency tracking.
-- Agent-based workflow.
-- SQL guard.
-- PII and prompt-injection checks.
-- Critic-based response evaluation.
-- LangGraph orchestration.
-- SQLite checkpointing.
-- G1, G2, and G3 evaluation dataset preparation.
-- G3 answer generation and citation validation.
-- G3 failure analysis.
-- Phase 6 five-intent workflow validation and human interrupt/resume test.
+- Complaint dataset preparation and June holdout separation.
+- Regulatory document processing, Titan embedding generation, and FAISS indexing.
+- Complaint and regulatory retrieval components.
+- Bedrock LLM integration and structured response handling.
+- Agent-based workflow, SQL guard, PII and prompt-injection checks.
+- LangGraph orchestration, human interrupt/resume workflow validation, and SQLite checkpointing implementation.
 - Approved live S3 publication and verification for ANALYTICS, BRIEF, and REG_QA reports.
-- Phase 7 G3 independent Opus evaluation (14 ACCEPT / 3 REVISE).
-- Phase 7 G3 master validation (70/70 checks passed).
+- G1 final closure metrics for 60 records.
+- G2 strict result comparison and manual semantic-equivalence review.
+- G3 retrieval, answer-generation, citation, critic, independent Opus, and manual-review artifacts.
+- G4 offline prompt-injection and synthetic PII checks.
+- Phase 7 consolidated checkpoint audit and three selected failure analyses.
+- Phase 8 offline notebook demonstration, executed successfully across 17 cells.
 
 ---
 
-# 9. Pending Work and Recommended Next Steps
+# 9. Remaining Work and Recommended Next Steps
 
-The following activities remain before the project can be considered fully validated.
+The remaining work below is presented as known evaluation and documentation gaps, not as a claim that all items must be implemented before demonstrating the current prototype.
 
-## 9.1 Complete G1
+## 9.1 G1 – Triage
 
-1. Complete manual annotation of the 60 complaint records.
-2. Review severity labels.
-3. Review vulnerable-customer labels.
-4. Review vulnerability signals.
-5. Review regulatory hints.
-6. Finalize human-reviewed summaries.
-7. Execute the triage evaluation.
-8. Calculate classification and assessment metrics.
-9. Document error cases.
+1. Complete human annotation of the 60 records for severity and vulnerability-related fields if those metrics are required.
+2. Calculate and report severity/vulnerability metrics only after annotation is completed.
+3. Retain the final closure classification metrics and document the observed classification errors.
 
-## 9.2 Complete G2
+## 9.2 G2 – Analytics
 
-1. Restore the evaluation environment.
-2. Load the 20 analytical questions.
-3. Execute the analytics agent against the test questions.
-4. Capture actual SQL and outputs.
-5. Compare actual outputs with reference SQL results.
-6. Evaluate answerability and abstention for the two unanswerable questions.
-7. Calculate the final analytical evaluation metrics.
-8. Document discrepancies and failure cases.
+1. Preserve the strict equality result of 13/18 separately from the five manually accepted semantic equivalents.
+2. If required, validate the actual refusal outputs for G2-19 and G2-20.
+3. Retain query-level discrepancies and avoid presenting semantic equivalence as strict equality.
 
-## 9.3 Complete G3
+## 9.3 G3 – Regulatory QA
 
-1. Resume from the saved repository and evaluation artifacts; do not assume the temporary SageMaker runtime is still available.
-2. Review the three Opus REVISE cases: G3-04, G3-06, and G3-15.
-3. Inspect the actual `drafter_node` implementation and confirm how it consumes the `critique` field.
-4. Inspect the regulatory retrieval implementation and source completeness for the affected answers.
-5. Improve or supplement retrieval where complete source text is available.
-6. Revise unsupported or overextended claims and preserve appropriate qualifications.
-7. Re-run the relevant G3 evaluation steps only when the environment and budget permit.
-8. Complete manual regulatory/compliance review of all 17 answerable outputs.
-9. Validate the three intentionally unanswerable Harbourline questions and confirm appropriate abstention.
-10. Produce the final G3 evaluation report, clearly separating automated evaluation from human sign-off.
+1. Review G3-04, G3-06, and G3-15, which were marked REVISE by the independent Opus evaluation.
+2. Complete genuine human regulatory/compliance review if required by the project acceptance criteria.
+3. Investigate the automated abstention detector's 0/3 result separately from the manual review of the three refusal answers.
+4. Keep citation-ID validity separate from semantic citation support.
+5. Do not replace original evaluation artifacts or detector outputs with manually or AI-adjusted labels.
 
-## 9.4 Final integration and project reporting
+## 9.4 G4 – Safety
 
-After the individual evaluation tracks are completed:
+1. Complete the 10-case human evaluation worksheet if the human 1–5 rubric is required.
+2. Treat current guard and PII results as offline component checks, not full end-to-end agent validation.
 
-1. Execute an end-to-end workflow validation.
-2. Validate all agent routing paths.
-3. Verify human approval and refusal behavior.
-4. Verify source citations and traceability.
-5. Review security and PII handling.
-6. Consolidate the G1, G2, and G3 evaluation results.
-7. Prepare the final project report.
-8. Document known limitations and future improvements.
+## 9.5 Cross-track evaluation gaps
+
+1. Run and preserve B0/B1/B2 baseline experiments only if remaining budget and project scope permit.
+2. Run and preserve A1/A2 ablation experiments only if required and feasible.
+3. Complete the ten-case human judge calibration with genuine human labels before reporting human agreement or Cohen's kappa.
+4. Capture validated cost-per-request data only if supported by reliable usage and pricing evidence.
+5. Complete a comparable checkpoint latency table only when measurements use a consistent methodology.
+
+## 9.6 Final project documentation
+
+1. Update the report and README from the latest executed `06_eval.ipynb` and `07_demo.ipynb`.
+2. Preserve actual notebook outputs and the original evaluation artifacts.
+3. Clearly label implemented, executed, partially validated, and not completed items.
+4. Document the offline notebook UI as the current demo scope; do not describe it as a deployed web application.
 
 ---
 
@@ -1436,21 +1038,20 @@ Do not overwrite the existing checkpoint database or evaluation results without 
 
 # 11. Known Limitations
 
-The following limitations were identified during development and evaluation:
+1. Regulatory retrieval does not consistently retrieve complete source text for every detailed legal statement.
+2. Citation-ID validity does not establish semantic citation correctness.
+3. G3 independent Opus evaluation marked three answers (G3-04, G3-06, G3-15) REVISE.
+4. G3 automated abstention detection passed 0/3 intentionally unanswerable cases, although manual inspection considered the refusal wording acceptable; these are different forms of evidence.
+5. G1 severity and vulnerability annotations remain incomplete (0/60).
+6. G2 refusal behavior for the two unanswerable questions is not established by the available evidence.
+7. G4 human rubric review remains pending; current checks cover offline guard and synthetic PII behavior only.
+8. B0/B1/B2 baseline and A1/A2 ablation evidence was not found in the consolidated audit.
+9. Genuine human judge calibration and human Cohen's kappa are not available. AI-assisted labels must not be represented as human labels.
+10. Cost per request is not available from the consolidated checkpoint evidence.
+11. The Phase 8 deliverable is a notebook-based offline UI, not an online Streamlit or production deployment.
+12. The platform has not been established as production-ready or approved for regulated banking use.
 
-1. Regulatory retrieval does not consistently retrieve the complete text needed to support every detailed legal statement.
-2. Some regulatory chunks are truncated, making them insufficient for detailed answer generation.
-3. Citation ID validation does not establish semantic citation correctness.
-4. Earlier G3 critic runs identified unsupported statements and incorrect citation mappings.
-5. The first targeted G3 repair attempt did not change answer text; the latest independent Opus evaluation subsequently rated 14/17 ACCEPT and 3/17 REVISE.
-6. G1 manual annotation has not been completed.
-7. G2 agent-versus-reference empirical evaluation has not been completed.
-8. The three G3 REVISE answers, manual review, and unanswerable-question abstention validation remain pending.
-9. The 70/70 G3 master validation is not a substitute for semantic or human regulatory approval.
-10. Model cost estimates require separate validation against actual usage and pricing.
-11. Final end-to-end performance and quality metrics have not yet been consolidated.
-
-These limitations should remain visible in the project documentation until they are addressed and verified.
+These limitations should remain visible until the corresponding evidence is completed and verified.
 
 ---
 
@@ -1467,8 +1068,6 @@ The final goal of ComplaintIQ is to provide a reliable, traceable, and controlle
 - Automated quality evaluation.
 - Human approval and oversight.
 
-The project has established the core data, retrieval, LLM, agent, and orchestration components.
+The project has established its core data, retrieval, LLM, agent, and orchestration components, demonstrated approved report publication, consolidated evaluation evidence across G1–G4, and implemented an offline notebook demonstration.
 
-The remaining focus is to complete G1 and G2 empirical evaluation, address the three G3 REVISE answers, complete human review and abstention testing, and consolidate cross-track performance results.
-
-**Overall project status: Core platform implementation completed within the documented scope; Phase 7 evaluation and final validation remain in progress.**
+**Overall project status: Core prototype implementation and offline demonstration are in place. Phase 7 has partial evaluation evidence with clearly documented outstanding validation gaps. The project is not represented as production-ready.**
